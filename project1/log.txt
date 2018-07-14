@@ -1,0 +1,8 @@
+----- Start Server -----
+[INFO]: Creating master socket 4
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
