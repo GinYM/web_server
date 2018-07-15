@@ -17,7 +17,9 @@ typedef struct
 	char http_version[50];
 	char http_method[50];
 	char http_uri[4096];
+	char http_connection[4096];
 	Request_header *headers;
+	int header_capacity;
 	int header_count;
 } Request;
 

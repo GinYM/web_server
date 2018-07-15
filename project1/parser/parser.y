@@ -193,12 +193,25 @@ request_line: token t_sp text t_sp text t_crlf {
 	strcpy(parsing_request->http_version, $5);
 }
 
-request_header: token ows t_colon ows text ows t_crlf {
+request_header: token ows t_colon ows text ows {
+	if(parsing_request->header_count >= parsing_request->header_capacity){
+		Request * req = (Request_header *) malloc(sizeof(Request_header)*(parsing_request->header_count*2+1));
+		if(parsing_request->header_capacity > 0)
+			memcpy(req, parsing_request->headers, sizeof(parsing_request->headers)*parsing_request->header_capacity);
+		parsing_request->header_capacity = parsing_request->header_count*2+1;
+		Request* old = parsing_request->headers;
+		parsing_request->headers = req;
+		free(old);
+		
+	}
 	YPRINTF("request_Header:\n%s\n%s\n",$1,$5);
   strcpy(parsing_request->headers[parsing_request->header_count].header_name, $1);
 	strcpy(parsing_request->headers[parsing_request->header_count].header_value, $5);
 	parsing_request->header_count++;
 };
+
+request_header_all: |
+request_header t_crlf request_header_all ;
 
 
 /*
@@ -207,7 +220,7 @@ request_header: token ows t_colon ows text ows t_crlf {
  * and the annotated excerpted text on the course website. All the best!
  *
  */
-request: request_line request_header t_crlf{
+request: request_line request_header_all t_crlf{
 	YPRINTF("parsing_request: Matched Success.\n");
 	return SUCCESS;
 };

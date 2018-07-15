@@ -24,10 +24,12 @@ int main(int argc, char **argv){
   printf("Http Method %s\n",request->http_method);
   printf("Http Version %s\n",request->http_version);
   printf("Http Uri %s\n",request->http_uri);
+  printf("header_count: %d\n", request->header_count);
   for(index = 0;index < request->header_count;index++){
     printf("Request Header\n");
     printf("Header name %s Header Value %s\n",request->headers[index].header_name,request->headers[index].header_value);
   }
+  printf("Finished parsing!\n");
   free(request->headers);
   free(request);
   return 0;
