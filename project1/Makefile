@@ -7,7 +7,7 @@
 #                                                                              #
 ################################################################################
 
-HEADERS = lisod.h util/util.* server/echo_server.h server/echo_server.c
+DEPS = lisod.h util/util.* server/server.h server/server.c parser/parse.h parser/y.tab.h parser/*.c
 CC   = gcc
 CFLAGS = -Wall
 LDFLAGS = 
@@ -17,8 +17,9 @@ TARGET = lisod
 all: ${TARGET}
 
 ${TARGET}: ${OBJFILES}
-	${CC} ${CFLAGS} -o ${TARGET} ${OBJFILES} ${HEADERS} ${LDFLAGS}
+	cd parser && ${MAKE} && cd ..
+	${CC} ${CFLAGS} -o ${TARGET} ${OBJFILES} ${DEPS} ${LDFLAGS}
 
 
 clean:
-	rm -f ${OBJFILES} ${TARGET} *~
+	rm -f ${OBJFILES} ${TARGET} *~ parser/*~ parser/*.o parser/lex.yy.c parser/y.tab.c parser/y.tab.h

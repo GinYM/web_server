@@ -11,7 +11,7 @@
 *                                                                             *
 *******************************************************************************/
 
-#include "echo_server.h"
+#include "server.h"
 //#include "../util/util.h"
 
 
@@ -27,7 +27,7 @@ int close_socket(int sock)
 }
 
 //warpper for send, send all data
-int sendall(int client_sock_name, char *buf, ssize_t content_size, struct pool* p)
+int sendall(int client_sock_name, char *buf, ssize_t content_size)
 {
     if(content_size > BUF_SIZE){
         print_log("[ERROR] No moew than BUF_SIZE:%d, current:%ld", BUF_SIZE, content_size);
@@ -159,7 +159,9 @@ int start_server()
                     if((readret = recv(i, buf, BUF_SIZE, 0)) >= 1)
                     {
                         print_log("[INFO]: Start sending msg\n");
-                        if (sendall(i, buf, readret, 0) != readret)
+                        char * respond_buf;
+                        readret = handle_request(buf, readret, i, respond_buf);
+                        if (sendall(i, respond_buf, readret) != readret)
                         {
                             
                             close_socket(i);
@@ -169,8 +171,10 @@ int start_server()
                                     max_sd--;
                                 }
                             }
+                            print_log("Error sending to client.\n");
+                            
                             //fprintf(stderr, "Error sending to client.\n");
-                            return EXIT_FAILURE;
+                            //return EXIT_FAILURE;
                         }
                         print_log("[INFO]: Sending size %ld\n", readret);
                         memset(buf, 0, BUF_SIZE);

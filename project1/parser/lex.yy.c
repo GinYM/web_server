@@ -785,7 +785,7 @@ YY_DECL
 		}
 
 	{
-#line 120 "lexer.l"
+#line 122 "lexer.l"
 
 
 /*
@@ -860,7 +860,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 135 "lexer.l"
+#line 137 "lexer.l"
 {
 	/* Rule 1: Backslash */
 
@@ -879,7 +879,7 @@ YY_RULE_SETUP
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 150 "lexer.l"
+#line 154 "lexer.l"
 {
 	/* Rule 2: CRLF */
 
@@ -895,7 +895,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 163 "lexer.l"
+#line 167 "lexer.l"
 {
 	/* Rule 3: Space */
 
@@ -908,7 +908,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 173 "lexer.l"
+#line 177 "lexer.l"
 {
 	/* Rule 4: A sequence of white spaces */
 
@@ -922,7 +922,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 184 "lexer.l"
+#line 188 "lexer.l"
 {
 	/* Rule 5: A digit */
 
@@ -935,7 +935,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 194 "lexer.l"
+#line 198 "lexer.l"
 {
 	/* Rule 6: A dot */
 
@@ -946,7 +946,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 202 "lexer.l"
+#line 206 "lexer.l"
 {
 	/* Rule 7: A colon */
 
@@ -957,7 +957,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 210 "lexer.l"
+#line 214 "lexer.l"
 {
 	/* Rule 8: A separator */
 
@@ -968,7 +968,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 218 "lexer.l"
+#line 222 "lexer.l"
 {
 	/* Rule 9: A character allowed in a token */
 
@@ -984,7 +984,7 @@ YY_RULE_SETUP
 case 10:
 /* rule 10 can match eol */
 YY_RULE_SETUP
-#line 230 "lexer.l"
+#line 234 "lexer.l"
 {
 	/* Rule 10: Linear white spaces */
 
@@ -994,7 +994,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 237 "lexer.l"
+#line 241 "lexer.l"
 ECHO;
 	YY_BREAK
 #line 1001 "lex.yy.c"
@@ -1998,7 +1998,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 237 "lexer.l"
+#line 241 "lexer.l"
 
 
 

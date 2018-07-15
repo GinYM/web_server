@@ -68,6 +68,7 @@ Request *parsing_request;
 %token t_separators
 %token t_sp
 %token t_ws
+%token t_all_octet
 
 /* Type of value returned for these tokens */
 %type<str> t_crlf
@@ -80,6 +81,7 @@ Request *parsing_request;
 %type<i> t_separators
 %type<i> t_sp
 %type<str> t_ws
+%type<str> t_all_octet
 
 /*
  * Followed by this, you should have types defined for all the intermediate
@@ -213,6 +215,16 @@ request_header: token ows t_colon ows text ows {
 request_header_all: |
 request_header t_crlf request_header_all ;
 
+/*
+ * message-body message-body = entity-body
+ *                   | <entity-body encoded as per Transfer-Encoding>
+ */
+
+/*
+ * Transfer-Encoding       = "Transfer-Encoding" ":" 1#transfer-coding
+ */
+
+
 
 /*
  * You need to fill this rule, and you are done! You have all the assembly
@@ -224,6 +236,7 @@ request: request_line request_header_all t_crlf{
 	YPRINTF("parsing_request: Matched Success.\n");
 	return SUCCESS;
 };
+
 
 %%
 

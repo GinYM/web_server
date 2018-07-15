@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "server/echo_server.h"
+#include "server/server.h"
 
 extern char *HTTP_port;
 extern char *HTTPS_port;

@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <sys/select.h>
 #include <sys/ioctl.h>
+#include "handle_request.h"
 
 #if !defined(UTIL)
 #include "../util/util.h"

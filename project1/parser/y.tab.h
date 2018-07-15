@@ -54,7 +54,8 @@ extern int yydebug;
     t_colon = 264,
     t_separators = 265,
     t_sp = 266,
-    t_ws = 267
+    t_ws = 267,
+    t_all_octet = 268
   };
 #endif
 /* Tokens.  */
@@ -68,6 +69,7 @@ extern int yydebug;
 #define t_separators 265
 #define t_sp 266
 #define t_ws 267
+#define t_all_octet 268
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -79,7 +81,7 @@ union YYSTYPE
 	char str[8192];
 	int i;
 
-#line 83 "y.tab.h" /* yacc.c:1909  */
+#line 85 "y.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

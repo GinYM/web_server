@@ -21,6 +21,7 @@ typedef struct
 	Request_header *headers;
 	int header_capacity;
 	int header_count;
+	//int suc; // whether parsing is successed
 } Request;
 
 Request* parse(char *buffer, int size,int socketFd);
