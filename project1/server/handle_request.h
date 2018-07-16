@@ -21,3 +21,6 @@
 #if !defined(UTIL)
 #include "../util/util.h"
 #endif
+
+int handle_request(char *buffer, int size, int socketFd, char **resp_buf);
+int respond_error(char *buffer, int size, int socketFd, char **resp_buf);

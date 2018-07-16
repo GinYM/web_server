@@ -6,3 +6,1288 @@
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:(null)
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:(null)
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] handle_get: HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[DEBUUG] Sending :HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 318
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /images/liso_header.png
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /index.html
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /bad.html
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] handle_get: HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[DEBUUG] Sending :HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 318
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /images/liso_header.png
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /index.html
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /bad.html
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] handle_get: HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[DEBUUG] Sending :HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 318
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /images/liso_header.png
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /index.html
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /bad.html
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] handle_get: HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[DEBUUG] Sending :HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 318
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /images/liso_header.png
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /index.html
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /bad.html
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] handle_get: HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[DEBUUG] Sending :HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 318
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /images/liso_header.png
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method POST
+Http Version HTTP/1.1
+Http Uri /index.html
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Request Header
+Header name Content-Length Header Value 10
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /bad.html
+header_count: 5
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+body {  background-color: #000; font-family: Serif; font-size: 1.2em;
+        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
+img { display: block; margin: auto; }
+p { text-align: justify; margin-top: 25px; }
+
+a { color: #808080; text-decoration: none; }
+
+#page { width: 800px; margin: auto; }
+
+
+[INFO]: Sending size 0
+[INFO]: close connection![INFO]: Start select!

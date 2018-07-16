@@ -7,6 +7,7 @@ void print_log(const char* format, ...){
     va_start (args, format);
     vfprintf (f_log, format, args);
     va_end (args);
+    fflush(f_log);
     return; 
 
 }

@@ -35,8 +35,11 @@ int sendall(int client_sock_name, char *buf, ssize_t content_size)
     ssize_t left = content_size;
     ssize_t ret_size = 0;
     while(left > 0){
+        print_log("[DEBUUG] Sending :%s\n", buf);
         ret_size = send(client_sock_name, buf, left, 0);
+        buf += ret_size;
         left -= ret_size;
+        
     }
     return 0;
         
@@ -160,7 +163,7 @@ int start_server()
                     {
                         print_log("[INFO]: Start sending msg\n");
                         char * respond_buf;
-                        readret = handle_request(buf, readret, i, respond_buf);
+                        readret = handle_request(buf, readret, i, &respond_buf);
                         if (sendall(i, respond_buf, readret) != readret)
                         {
                             
@@ -171,7 +174,7 @@ int start_server()
                                     max_sd--;
                                 }
                             }
-                            print_log("Error sending to client.\n");
+                            print_log("[ERROR] Error sending to client.\n");
                             
                             //fprintf(stderr, "Error sending to client.\n");
                             //return EXIT_FAILURE;
