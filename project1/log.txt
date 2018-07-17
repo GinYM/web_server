@@ -54,7 +54,16 @@ Finished parsing!
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
+[DEBUG] Current date:Tue, 17 Jul 2018 09:09:50 GMT
+[DEBUG] real content_length:301, resut:301
 [DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
 body {  background-color: #000; font-family: Serif; font-size: 1.2em;
         color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
 img { display: block; margin: auto; }
@@ -63,7 +72,6 @@ p { text-align: justify; margin-top: 25px; }
 a { color: #808080; text-decoration: none; }
 
 #page { width: 800px; margin: auto; }
-
 
 Http Method GET
 Http Version HTTP/1.1
@@ -81,6 +89,13 @@ Request Header
 Header name User-Agent Header Value python-requests/2.19.1
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
 body {  background-color: #000; font-family: Serif; font-size: 1.2em;
         color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
 img { display: block; margin: auto; }
@@ -89,9 +104,15 @@ p { text-align: justify; margin-top: 25px; }
 a { color: #808080; text-decoration: none; }
 
 #page { width: 800px; margin: auto; }
-
 
 [DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
 body {  background-color: #000; font-family: Serif; font-size: 1.2em;
         color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
 img { display: block; margin: auto; }
@@ -100,215 +121,10 @@ p { text-align: justify; margin-top: 25px; }
 a { color: #808080; text-decoration: none; }
 
 #page { width: 800px; margin: auto; }
-
 
 [ERROR] Error sending to client.
-[INFO]: Sending size 318
+[INFO]: Sending size 488
 [INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /images/liso_header.png
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /bad.html
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
@@ -316,20 +132,22 @@ a { color: #808080; text-decoration: none; }
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
+[DEBUG] Current date:Tue, 17 Jul 2018 09:09:50 GMT
+[DEBUG] real content_length:17431, resut:17431
 [DEBUG] handle_get: HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
+‰PNG
+
 
 Http Method GET
 Http Version HTTP/1.1
-Http Uri /style.css
+Http Uri /images/liso_header.png
 header_count: 5
 Request Header
 Header name Host Header Value 
@@ -343,234 +161,30 @@ Request Header
 Header name User-Agent Header Value python-requests/2.19.1
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-a { color: #808080; text-decoration: none; }
+‰PNG
+
 
-#page { width: 800px; margin: auto; }
+[ERROR] No moew than BUF_SIZE:4096, current:17621[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-
-[DEBUUG] Sending :HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
+‰PNG
+
 
 [ERROR] Error sending to client.
-[INFO]: Sending size 318
+[INFO]: Sending size 17621
 [INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /images/liso_header.png
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /bad.html
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
@@ -578,170 +192,40 @@ a { color: #808080; text-decoration: none; }
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
+[DEBUG] Current date:Tue, 17 Jul 2018 09:09:50 GMT
+[DEBUG] real content_length:802, resut:802
 [DEBUG] handle_get: HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
-
+</html>
+!„B!„B!„B!„B!„B!„B!„2Æ¿õy„¯(
 Http Method GET
 Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[DEBUUG] Sending :HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 318
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /images/liso_header.png
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
 Http Uri /index.html
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /bad.html
 header_count: 5
 Request Header
 Header name Host Header Value 
@@ -755,84 +239,66 @@ Request Header
 Header name User-Agent Header Value python-requests/2.19.1
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
+</html>
+!„B!„B!„B!„B!„B!„B!„2Æ¿õy„¯(
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
+
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
+
+</html>
+!„B!„B!„B!„B!„B!„B!„2Æ¿õy„¯(
+[ERROR] Error sending to client.
+[INFO]: Sending size 990
 [INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
@@ -840,56 +306,106 @@ a { color: #808080; text-decoration: none; }
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
+[DEBUG] Current date:Tue, 17 Jul 2018 09:09:50 GMT
+[DEBUG] real content_length:802, resut:802
 [DEBUG] handle_get: HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
+</html>
 
 Http Method GET
 Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
+Http Uri /index.html
+header_count: 2
 Request Header
 Header name Host Header Value 
 Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
+Header name Connection Header Value Keep-Alive
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
+</html>
 
 [DEBUUG] Sending :HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
+</html>
 
 [ERROR] Error sending to client.
-[INFO]: Sending size 318
+[INFO]: Sending size 990
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
@@ -914,15 +430,33 @@ Request Header
 Header name Content-Length Header Value 10
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
+</html>
 
 [INFO]: Sending size 0
 [INFO]: close connection![INFO]: Start select!
@@ -949,277 +483,33 @@ Request Header
 Header name Content-Length Header Value 10
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /bad.html
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] handle_get: HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[DEBUUG] Sending :HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 318
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /images/liso_header.png
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
+</html>
 
 [INFO]: Sending size 0
 [INFO]: close connection![INFO]: Start select!
@@ -1246,15 +536,33 @@ Request Header
 Header name Content-Length Header Value 10
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
+</html>
 
 [INFO]: Sending size 0
 [INFO]: close connection![INFO]: Start select!
@@ -1279,15 +587,33 @@ Request Header
 Header name User-Agent Header Value python-requests/2.19.1
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+Connection: keep-alive
+Date: Tue, 17 Jul 2018 09:09:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-a { color: #808080; text-decoration: none; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-#page { width: 800px; margin: auto; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
+</html>
 
 [INFO]: Sending size 0
 [INFO]: close connection![INFO]: Start select!

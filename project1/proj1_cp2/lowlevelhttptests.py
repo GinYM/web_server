@@ -68,6 +68,8 @@ def check_correct_GET(host, port):
             break
         if p.is_message_complete():
             responses += 1
+            print nparsed
+            print len(data_all)
             if nparsed < len(data_all):
                 responses += 1 #more data 
             if p.get_status_code() >= 400:

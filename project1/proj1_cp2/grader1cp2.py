@@ -103,10 +103,14 @@ class project1cp2tester(tester):
             response = requests.get(test % (self.testsuite.ip, self.testsuite.port), timeout=10.0)
             contenthash = hashlib.sha256(response.content).hexdigest()
             self.pAssertEqual(200, response.status_code)
-            print "Test"
-            print test
-            print "Response"
+            #print "Test"
+            #print test
+            #print self.testsuite.tests[test]
+            #print "Response"
+            #print response
+            print response.headers
             print response.content
+            #print response.headers['content-type']
             self.pAssertEqual(contenthash, self.testsuite.tests[test][0])
         self.testsuite.scores['test_GET'] = 1
         err, res = lowlevelhttptests.check_correct_GET(self.testsuite.ip,\

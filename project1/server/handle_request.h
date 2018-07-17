@@ -17,6 +17,10 @@
 #include <netinet/in.h>
 #include <netinet/ip.h>
 #include "../parser/parse.h"
+#include <sys/stat.h>
+
+//timmer
+#include <time.h>
 
 #if !defined(UTIL)
 #include "../util/util.h"

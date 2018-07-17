@@ -179,6 +179,7 @@ int start_server()
                             //fprintf(stderr, "Error sending to client.\n");
                             //return EXIT_FAILURE;
                         }
+                        //free(respond_buf);
                         print_log("[INFO]: Sending size %ld\n", readret);
                         memset(buf, 0, BUF_SIZE);
                     }
