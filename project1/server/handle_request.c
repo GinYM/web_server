@@ -65,7 +65,7 @@ char* getSuffix(char *str){
     if(idx == -1){
         return sub;
     }else{
-        memcpy(sub, &str[idx+1], strlen(str)-1-(idx+1) + 1);
+        memcpy(sub, &str[idx+1], strlen(str)-1-(idx+1) + 1+1);
         return sub;
     }
 }
@@ -139,18 +139,23 @@ int handle_get(Request* request, char**buf){
     char *content;
     int cap = 8192;
     content = malloc(sizeof(char)*(content_length+2));
+
+    //show(*buf, buf_len);
     
     //content[0] = '\0';
-    if(strcmp(status,"200") == 0){
-        char content_tmp[1001];
+    printf("request->http_method : %s\n", request->http_method);
+    printf("status: %s\n", status);
+    if(strcmp(status,"200") == 0 && strcmp(request->http_method,"GET") == 0 ){
+        //char content_tmp[1001];
         //if(fgets(content, 1000, fp) != NULL){
         //    content_length += strlen(content);
         //}else{
         //    content_length = 0;
         //}
         int result;
+        printf("[DEBUG] real content_length:%d\n", content_length);
         result = fread (content,1,content_length,fp);
-        content[result] = '\0';
+        //content[result] = '\0';
         if(result != content_length){
             print_log("[ERROR] Reading error!\n");
         }
@@ -164,7 +169,11 @@ int handle_get(Request* request, char**buf){
         //print_log("[DEBUG]: content_len %ld\n", strlen(content));
         
     }
-    fclose(fp);
+
+    if(fp!=NULL){
+        fclose(fp);
+    }
+    
 
     //entity-header
     char content_length_str[1024];
@@ -174,6 +183,7 @@ int handle_get(Request* request, char**buf){
 
     // Content-Type   = "Content-Type" ":" media-type
     char* subfix = getSuffix(file_name);
+    printf("subfix:%s\n", subfix);
     if(strcmp(subfix, "html")==0 || strcmp(subfix, "css")==0){
         capacity = cat_str(buf, &buf_len, "Content-Type: text/", 19,capacity);
         capacity = cat_str(buf, &buf_len, subfix, strlen(subfix) ,capacity);
@@ -186,7 +196,7 @@ int handle_get(Request* request, char**buf){
         capacity = cat_str(buf, &buf_len, "Content-Type: image/jpeg\r\n", 26, capacity);
         //capacity = cat_str(buf, "\r\n", capacity);
     }else{
-        capacity = cat_str(buf, &buf_len, "text/plain\r\n", 12, capacity);
+        capacity = cat_str(buf, &buf_len, "Content-Type: text/plain\r\n", 12, capacity);
     }
 
     //Last-Modified
@@ -198,7 +208,7 @@ int handle_get(Request* request, char**buf){
         foo = gmtime(&(attrib.st_mtime));
         strftime (lastModifiedDate,128,"%a, %d %b %G %T GMT",foo);
         capacity = cat_str(buf, &buf_len, "Last-Modified: ", 15, capacity);
-        (*buf)[buf_len] = '\0';
+        //(*buf)[buf_len] = '\0';
         //printf("Before?? %s\n", *buf);
         
         //printf("Date:%s\n", lastModifiedDate);
@@ -213,7 +223,10 @@ int handle_get(Request* request, char**buf){
 
     capacity = cat_str(buf, &buf_len, "\r\n", 2, capacity);
 
-    capacity = cat_str(buf, &buf_len, content, content_length, capacity);
+    //message-body
+    //printf("error! 404aa\n");
+    if(strcmp(request->http_method,"GET") == 0)
+        capacity = cat_str(buf, &buf_len, content, content_length, capacity);
     //capacity = cat_str(buf, &buf_len, "\r\n", 2, capacity);
     //show(*buf, buf_len);
     print_log("[DEBUG] handle_get: %s\n", *buf);
@@ -247,7 +260,7 @@ int handle_request(char *buffer, int size, int socketFd, char **resp_buf){
   Request *request = parse(buffer,size,socketFd);
   //Just printing everything
   int buf_size = 0;
-  if(strcmp(request->http_method,"GET") == 0){
+  if(strcmp(request->http_method,"GET") == 0 || strcmp(request->http_method,"HEAD") == 0){
       buf_size = handle_get(request, resp_buf);
   }
   print_log("Http Method %s\n",request->http_method);
