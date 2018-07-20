@@ -148,7 +148,8 @@ extern int yydebug;
     t_separators = 265,
     t_sp = 266,
     t_ws = 267,
-    t_ctl = 268
+    t_ctl = 268,
+    t_eof = 269
   };
 #endif
 /* Tokens.  */
@@ -163,6 +164,7 @@ extern int yydebug;
 #define t_sp 266
 #define t_ws 267
 #define t_ctl 268
+#define t_eof 269
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -174,7 +176,7 @@ union YYSTYPE
 	char str[8192];
 	int i;
 
-#line 178 "y.tab.c" /* yacc.c:355  */
+#line 180 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -191,7 +193,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 195 "y.tab.c" /* yacc.c:358  */
+#line 197 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -436,7 +438,7 @@ union yyalloc
 #define YYLAST   63
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  14
+#define YYNTOKENS  15
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  13
 /* YYNRULES -- Number of rules.  */
@@ -447,7 +449,7 @@ union yyalloc
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   268
+#define YYMAXUTOK   269
 
 #define YYTRANSLATE(YYX)                                                \
   ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
@@ -482,16 +484,16 @@ static const yytype_uint8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
-       5,     6,     7,     8,     9,    10,    11,    12,    13
+       5,     6,     7,     8,     9,    10,    11,    12,    13,    14
 };
 
 #if YYDEBUG
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   115,   115,   116,   119,   122,   123,   124,   125,   132,
-     136,   142,   146,   172,   173,   176,   179,   187,   191,   199,
-     203,   207,   214,   222,   242,   243,   256,   257,   279
+       0,   117,   117,   118,   121,   124,   125,   126,   127,   134,
+     138,   144,   148,   174,   175,   178,   181,   189,   193,   201,
+     205,   209,   216,   224,   244,   245,   258,   259,   281
 };
 #endif
 
@@ -502,7 +504,7 @@ static const char *const yytname[] =
 {
   "$end", "error", "$undefined", "t_crlf", "t_backslash", "t_digit",
   "t_dot", "t_token_char", "t_lws", "t_colon", "t_separators", "t_sp",
-  "t_ws", "t_ctl", "$accept", "allowed_char_for_token",
+  "t_ws", "t_ctl", "t_eof", "$accept", "allowed_char_for_token",
   "allowed_char_for_octet", "token", "all_octet", "allowed_char_for_text",
   "text", "ows", "request_line", "request_header", "request_header_all",
   "message_body", "request", YY_NULLPTR
@@ -515,7 +517,7 @@ static const char *const yytname[] =
 static const yytype_uint16 yytoknum[] =
 {
        0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
-     265,   266,   267,   268
+     265,   266,   267,   268,   269
 };
 # endif
 
@@ -595,19 +597,19 @@ static const yytype_int8 yycheck[] =
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     5,     6,     7,    15,    17,    22,    26,    11,    15,
-      17,    23,    24,     0,     4,     9,    10,    15,    19,    20,
-      11,    12,    21,    24,     3,    11,    21,     9,    10,    11,
-      13,    15,    16,    18,    25,    20,    19,    21,    16,     3,
-      20,    21,     3
+       0,     5,     6,     7,    16,    18,    23,    27,    11,    16,
+      18,    24,    25,     0,     4,     9,    10,    16,    20,    21,
+      11,    12,    22,    25,     3,    11,    22,     9,    10,    11,
+      13,    16,    17,    19,    26,    21,    20,    22,    17,     3,
+      21,    22,     3
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,    14,    15,    15,    15,    16,    16,    16,    16,    17,
-      17,    18,    18,    19,    19,    19,    19,    20,    20,    21,
-      21,    21,    22,    23,    24,    24,    25,    25,    26
+       0,    15,    16,    16,    16,    17,    17,    17,    17,    18,
+      18,    19,    19,    20,    20,    20,    20,    21,    21,    22,
+      22,    22,    23,    24,    25,    25,    26,    26,    27
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -1292,131 +1294,131 @@ yyreduce:
   switch (yyn)
     {
         case 3:
-#line 116 "parser.y" /* yacc.c:1646  */
+#line 118 "parser.y" /* yacc.c:1646  */
     {
 	(yyval.i) = '0' + (yyvsp[0].i);
 }
-#line 1300 "y.tab.c" /* yacc.c:1646  */
+#line 1302 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 132 "parser.y" /* yacc.c:1646  */
+#line 134 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("token: Matched rule 1 %c.\n", (yyvsp[0].i));
 	snprintf((yyval.str), 8192, "%c", (yyvsp[0].i));
 }
-#line 1309 "y.tab.c" /* yacc.c:1646  */
+#line 1311 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 136 "parser.y" /* yacc.c:1646  */
+#line 138 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("token: Matched rule 2. %s%c\n", (yyvsp[-1].str),(yyvsp[0].i));
   	snprintf((yyval.str), 8192, "%s%c", (yyvsp[-1].str), (yyvsp[0].i));
 }
-#line 1318 "y.tab.c" /* yacc.c:1646  */
+#line 1320 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 142 "parser.y" /* yacc.c:1646  */
+#line 144 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("all_octet: Matched rule 1 %c.\n", (yyvsp[0].i));
 	snprintf((yyval.str), 8192, "%c", (yyvsp[0].i));
 }
-#line 1327 "y.tab.c" /* yacc.c:1646  */
+#line 1329 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 146 "parser.y" /* yacc.c:1646  */
+#line 148 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("all_octet: Matched rule 2. %s%c\n", (yyvsp[-1].str),(yyvsp[0].i));
   	snprintf((yyval.str), 8192, "%s%c", (yyvsp[-1].str), (yyvsp[0].i));
 }
-#line 1336 "y.tab.c" /* yacc.c:1646  */
+#line 1338 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 173 "parser.y" /* yacc.c:1646  */
+#line 175 "parser.y" /* yacc.c:1646  */
     {
 	(yyval.i) = (yyvsp[0].i);
 }
-#line 1344 "y.tab.c" /* yacc.c:1646  */
+#line 1346 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 176 "parser.y" /* yacc.c:1646  */
+#line 178 "parser.y" /* yacc.c:1646  */
     {
 	(yyval.i) = (yyvsp[0].i);
 }
-#line 1352 "y.tab.c" /* yacc.c:1646  */
+#line 1354 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 179 "parser.y" /* yacc.c:1646  */
+#line 181 "parser.y" /* yacc.c:1646  */
     {
 	(yyval.i) = (yyvsp[0].i);
 }
-#line 1360 "y.tab.c" /* yacc.c:1646  */
+#line 1362 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 187 "parser.y" /* yacc.c:1646  */
+#line 189 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("text: Matched rule 1 %c.\n", (yyvsp[0].i));
 	snprintf((yyval.str), 8192, "%c", (yyvsp[0].i));
 }
-#line 1369 "y.tab.c" /* yacc.c:1646  */
+#line 1371 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 191 "parser.y" /* yacc.c:1646  */
+#line 193 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("text: Matched rule 2 %s%s%c.\n", (yyvsp[-2].str),(yyvsp[-1].str),(yyvsp[0].i));
 	snprintf((yyval.str), 8192, "%s%s%c", (yyvsp[-2].str), (yyvsp[-1].str), (yyvsp[0].i));
 }
-#line 1378 "y.tab.c" /* yacc.c:1646  */
+#line 1380 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 199 "parser.y" /* yacc.c:1646  */
+#line 201 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("OWS: Matched rule 1\n");
 	(yyval.str)[0]=0;
 }
-#line 1387 "y.tab.c" /* yacc.c:1646  */
+#line 1389 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 203 "parser.y" /* yacc.c:1646  */
+#line 205 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("OWS: Matched rule 2\n");
 	snprintf((yyval.str), 8192, "%c", (yyvsp[0].i));
 }
-#line 1396 "y.tab.c" /* yacc.c:1646  */
+#line 1398 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 207 "parser.y" /* yacc.c:1646  */
+#line 209 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("OWS: Matched rule 3\n");
 	snprintf((yyval.str), 8192, "%s", (yyvsp[0].str));
 }
-#line 1405 "y.tab.c" /* yacc.c:1646  */
+#line 1407 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 214 "parser.y" /* yacc.c:1646  */
+#line 216 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("request_Line:\n%s\n%s\n%s\n",(yyvsp[-5].str), (yyvsp[-3].str),(yyvsp[-1].str));
   strcpy(parsing_request->http_method, (yyvsp[-5].str));
 	strcpy(parsing_request->http_uri, (yyvsp[-3].str));
 	strcpy(parsing_request->http_version, (yyvsp[-1].str));
 }
-#line 1416 "y.tab.c" /* yacc.c:1646  */
+#line 1418 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 222 "parser.y" /* yacc.c:1646  */
+#line 224 "parser.y" /* yacc.c:1646  */
     {
 	if(parsing_request->header_count >= parsing_request->header_capacity){
 		Request_header * req = (Request_header *) malloc(sizeof(Request_header)*(parsing_request->header_count*2+1));
@@ -1436,17 +1438,17 @@ yyreduce:
 	strcpy(parsing_request->headers[parsing_request->header_count].header_value, (yyvsp[-2].str));
 	parsing_request->header_count++;
 }
-#line 1440 "y.tab.c" /* yacc.c:1646  */
+#line 1442 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 26:
-#line 256 "parser.y" /* yacc.c:1646  */
+#line 258 "parser.y" /* yacc.c:1646  */
     {YPRINTF("Empty body.\n"); }
-#line 1446 "y.tab.c" /* yacc.c:1646  */
+#line 1448 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 257 "parser.y" /* yacc.c:1646  */
+#line 259 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("Find message body.\n");
 	if(strlen((yyvsp[0].str)) > parsing_request->body.capacity){
@@ -1456,20 +1458,20 @@ yyreduce:
 	strcpy(parsing_request->body.data, (yyvsp[0].str));
 	parsing_request->body.length = strlen((yyvsp[0].str));
 }
-#line 1460 "y.tab.c" /* yacc.c:1646  */
+#line 1462 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 279 "parser.y" /* yacc.c:1646  */
+#line 281 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("parsing_request (with message body): Matched Success.\n");
-	return SUCCESS;
+	YYACCEPT;
 }
-#line 1469 "y.tab.c" /* yacc.c:1646  */
+#line 1471 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1473 "y.tab.c" /* yacc.c:1646  */
+#line 1475 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1697,7 +1699,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 302 "parser.y" /* yacc.c:1906  */
+#line 304 "parser.y" /* yacc.c:1906  */
 
 
 /* C code */

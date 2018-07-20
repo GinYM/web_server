@@ -69,6 +69,7 @@ Request *parsing_request;
 %token t_sp
 %token t_ws
 %token t_ctl
+%token t_eof
 
 
 /* Type of value returned for these tokens */
@@ -83,6 +84,7 @@ Request *parsing_request;
 %type<i> t_sp
 %type<str> t_ws
 %type<i> t_ctl
+
 
 
 /*
@@ -276,9 +278,9 @@ message_body: {YPRINTF("Empty body.\n"); };|
 
 
 
-request: request_line request_header_all t_crlf message_body {
+request: request_line request_header_all t_crlf message_body  {
 	YPRINTF("parsing_request (with message body): Matched Success.\n");
-	return SUCCESS;
+	YYACCEPT;
 }; 
 
 

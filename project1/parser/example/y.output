@@ -1,6 +1,7 @@
 Terminals unused in grammar
 
    t_lws
+   t_eof
 
 
 State 25 conflicts: 6 shift/reduce
@@ -65,35 +66,36 @@ t_separators (265) 6 13
 t_sp (266) 7 19 21
 t_ws (267) 20
 t_ctl (268) 5
+t_eof (269)
 
 
 Nonterminals, with rules where they appear
 
-$accept (14)
+$accept (15)
     on left: 0
-allowed_char_for_token (15)
+allowed_char_for_token (16)
     on left: 1 2 3, on right: 4 8 9 12
-allowed_char_for_octet (16)
+allowed_char_for_octet (17)
     on left: 4 5 6 7, on right: 10 11
-token (17)
+token (18)
     on left: 8 9, on right: 9 21 22
-all_octet (18)
+all_octet (19)
     on left: 10 11, on right: 11 26
-allowed_char_for_text (19)
+allowed_char_for_text (20)
     on left: 12 13 14 15, on right: 16 17
-text (20)
+text (21)
     on left: 16 17, on right: 17 21 22
-ows (21)
+ows (22)
     on left: 18 19 20, on right: 17 22
-request_line (22)
+request_line (23)
     on left: 21, on right: 27
-request_header (23)
+request_header (24)
     on left: 22, on right: 24
-request_header_all (24)
+request_header_all (25)
     on left: 23 24, on right: 24 27
-message_body (25)
+message_body (26)
     on left: 25 26, on right: 27
-request (26)
+request (27)
     on left: 27, on right: 0
 
 

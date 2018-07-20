@@ -156,7 +156,10 @@ ctl             [\x0-\x1f\x7f]
 	return t_backslash;
 }
 
-
+<<EOF>> {
+	LPRINTF("t:EOF; \n");
+	return t_eof;
+}
 
 
 
@@ -261,4 +264,4 @@ ctl             [\x0-\x1f\x7f]
 %%
 
 int yywrap(void) {
-return -1; }
+return 1; }

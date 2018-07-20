@@ -1,5 +1,6 @@
 #include "parse.h"
-
+extern YY_FLUSH_BUFFER;
+extern int yylex_destroy(void);
 /**
 * Given a char buffer returns the parsed request headers
 */
@@ -88,12 +89,19 @@ Request * parse(char *buffer, int size, int socketFd) {
     //TODO You will need to handle resizing this in parser.y
 		//printf("Buf: %s\n", buf);
 		//printf("last one: %c\n", buf[i-1]);
-    request->headers = (Request_header *) malloc(sizeof(Request_header)*1);
-		set_parsing_options(buf, i, request);
+		//printf("buf[0]: %c\n", buf[0]);
 
+    request->headers = (Request_header *) malloc(sizeof(Request_header)*1);
+		
+		set_parsing_options(buf, i, request);
+		
 		if (yyparse() == SUCCESS) {
+			yylex_destroy();
+			//YY_FLUSH_BUFFER;
       return request;
 		}
+		yylex_destroy();
+		//YY_FLUSH_BUFFER;
 	}
   //TODO Handle Malformed Requests
   printf("Parsing Failed\n");

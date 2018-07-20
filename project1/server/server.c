@@ -181,8 +181,9 @@ int start_server()
                         }
                         //free(respond_buf);
                         print_log("[INFO]: Sending size %ld\n", readret);
-                        memset(buf, 0, BUF_SIZE);
+                        
                     }
+                    memset(buf, 0, BUF_SIZE);
                     //close the connection!
                     
                     if (readret == 0 || readret == -1)

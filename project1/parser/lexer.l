@@ -261,4 +261,4 @@ ctl             [\x0-\x1f\x7f]
 %%
 
 int yywrap(void) {
-return -1; }
+return 1; }

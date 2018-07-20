@@ -8,7 +8,7 @@
 #include "parse.h"
 
 /* Define YACCDEBUG to enable debug messages for this lex file */
-//#define YACCDEBUG
+#define YACCDEBUG
 #define YYERROR_VERBOSE
 #ifdef YACCDEBUG
 #include <stdio.h>
@@ -278,7 +278,7 @@ message_body: {YPRINTF("Empty body.\n"); };|
 
 request: request_line request_header_all t_crlf message_body {
 	YPRINTF("parsing_request (with message body): Matched Success.\n");
-	return SUCCESS;
+	YYACCEPT;
 }; 
 
 

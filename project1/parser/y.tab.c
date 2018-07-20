@@ -67,7 +67,7 @@
 #include "parse.h"
 
 /* Define YACCDEBUG to enable debug messages for this lex file */
-//#define YACCDEBUG
+#define YACCDEBUG
 #define YYERROR_VERBOSE
 #ifdef YACCDEBUG
 #include <stdio.h>
@@ -1463,7 +1463,7 @@ yyreduce:
 #line 279 "parser.y" /* yacc.c:1646  */
     {
 	YPRINTF("parsing_request (with message body): Matched Success.\n");
-	return SUCCESS;
+	YYACCEPT;
 }
 #line 1469 "y.tab.c" /* yacc.c:1646  */
     break;

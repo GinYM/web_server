@@ -878,10 +878,17 @@ YY_RULE_SETUP
 	return t_backslash;
 }
 	YY_BREAK
+case YY_STATE_EOF(INITIAL):
+#line 159 "lexer.l"
+{
+	LPRINTF("t:EOF; \n");
+	return t_eof;
+}
+	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 163 "lexer.l"
+#line 166 "lexer.l"
 {
 	/* Rule 2: CRLF */
 
@@ -897,7 +904,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 176 "lexer.l"
+#line 179 "lexer.l"
 {
 	/* Rule 3: Space */
 
@@ -910,7 +917,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 186 "lexer.l"
+#line 189 "lexer.l"
 {
 	/* Rule 4: A sequence of white spaces */
 
@@ -924,7 +931,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 197 "lexer.l"
+#line 200 "lexer.l"
 {
 	/* Rule 5: A digit */
 
@@ -937,7 +944,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 207 "lexer.l"
+#line 210 "lexer.l"
 {
 	/* Rule 6: A dot */
 
@@ -948,7 +955,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 215 "lexer.l"
+#line 218 "lexer.l"
 {
 	/* Rule 7: A colon */
 
@@ -959,7 +966,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 223 "lexer.l"
+#line 226 "lexer.l"
 {
 	/* Rule 8: A separator */
 
@@ -970,7 +977,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 233 "lexer.l"
+#line 236 "lexer.l"
 {
 	/* Rule 9: A character allowed in a token */
 
@@ -986,7 +993,7 @@ YY_RULE_SETUP
 case 10:
 /* rule 10 can match eol */
 YY_RULE_SETUP
-#line 248 "lexer.l"
+#line 251 "lexer.l"
 {
 	/* Rule 10: Linear white spaces */
 
@@ -997,7 +1004,7 @@ YY_RULE_SETUP
 case 11:
 /* rule 11 can match eol */
 YY_RULE_SETUP
-#line 255 "lexer.l"
+#line 258 "lexer.l"
 {
 	LPRINTF("t:token_char %c\n", yytext);
 	yylval.i = yytext[0];
@@ -1006,12 +1013,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 261 "lexer.l"
+#line 264 "lexer.l"
 ECHO;
 	YY_BREAK
-#line 1013 "lex.yy.c"
-case YY_STATE_EOF(INITIAL):
-	yyterminate();
+#line 1020 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -2010,10 +2015,10 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 261 "lexer.l"
+#line 264 "lexer.l"
 
 
 
 int yywrap(void) {
-return -1; }
+return 1; }
 

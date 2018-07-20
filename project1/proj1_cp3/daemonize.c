@@ -1,15 +1,22 @@
-#include "lisod.h"
+/******************************************************************************
+ * Reference: http://www.enderunix.org/docs/eng/daemon.php                    *
+ * Modified by: Wolf Richter <wolf@cs.cmu.edu>                                *
+ * O_EXCL Bug Fix by: Ming Han <mteh@andrew.cmu.edu                           *
+ ******************************************************************************/
 
-char *HTTP_port;
-char *HTTPS_port;
-char *log_file;
-char *lock_file;
-char *www_folder;
-char *cgi_script_path;
-char *private_key_file;
-char *certificate_file;
 
-#define DEBUG 1
+/* daemonize includes */
+#include <fcntl.h>
+#include <signal.h>
+#include <unistd.h>
+#include <syslog.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+/***** Utility Functions *****/
 
 /**
  * internal signal handler
@@ -73,30 +80,4 @@ int daemonize(char* lock_file)
         
 
         return EXIT_SUCCESS;
-}
-
-int main(int argc, char const *argv[])
-{
-    //daemonize
-    if(DEBUG == 0)
-        daemonize("lisod.lock");
-    if(argc != 9){
-        fprintf(stderr, "Please input 8 arguments!\n");
-        exit(-1);
-    }
-    
-    HTTP_port = strdup(argv[1]);
-    HTTPS_port = strdup(argv[2]);
-    log_file = strdup(argv[3]);
-    lock_file = strdup(argv[4]);
-    www_folder = strdup(argv[5]);
-    cgi_script_path = strdup(argv[6]);
-    private_key_file = strdup(argv[7]);
-    certificate_file = strdup(argv[8]);
-
-    f_log = fopen(log_file, "w");
-    start_server();
-    fclose(f_log);
-
-    return 0;
 }

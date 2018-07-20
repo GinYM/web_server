@@ -3,7 +3,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <unistd.h>
+#include <syslog.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include "server/server.h"
+
 
 extern char *HTTP_port;
 extern char *HTTPS_port;
