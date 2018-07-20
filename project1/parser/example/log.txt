@@ -1,0 +1,1337 @@
+BUf:
+GET /~prs/15-441-F15/ HTTP/1.1
+Host: www.cs.cmu.edu
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8
+
+
+buf[0]:G
+buf[1]:E
+buf[2]:T
+buf[3]: 
+buf[4]:/
+buf[5]:~
+buf[6]:p
+buf[7]:r
+buf[8]:s
+buf[9]:/
+buf[10]:1
+buf[11]:5
+buf[12]:-
+buf[13]:4
+buf[14]:4
+buf[15]:1
+buf[16]:-
+buf[17]:F
+buf[18]:1
+buf[19]:5
+buf[20]:/
+buf[21]: 
+buf[22]:H
+buf[23]:T
+buf[24]:T
+buf[25]:P
+buf[26]:/
+buf[27]:1
+buf[28]:.
+buf[29]:1
+buf[30]:
+buf[31]:
+
+buf[32]:H
+buf[33]:o
+buf[34]:s
+buf[35]:t
+buf[36]::
+buf[37]: 
+buf[38]:w
+buf[39]:w
+buf[40]:w
+buf[41]:.
+buf[42]:c
+buf[43]:s
+buf[44]:.
+buf[45]:c
+buf[46]:m
+buf[47]:u
+buf[48]:.
+buf[49]:e
+buf[50]:d
+buf[51]:u
+buf[52]:
+buf[53]:
+
+buf[54]:C
+buf[55]:o
+buf[56]:n
+buf[57]:n
+buf[58]:e
+buf[59]:c
+buf[60]:t
+buf[61]:i
+buf[62]:o
+buf[63]:n
+buf[64]::
+buf[65]: 
+buf[66]:k
+buf[67]:e
+buf[68]:e
+buf[69]:p
+buf[70]:-
+buf[71]:a
+buf[72]:l
+buf[73]:i
+buf[74]:v
+buf[75]:e
+buf[76]:
+buf[77]:
+
+buf[78]:A
+buf[79]:c
+buf[80]:c
+buf[81]:e
+buf[82]:p
+buf[83]:t
+buf[84]::
+buf[85]: 
+buf[86]:t
+buf[87]:e
+buf[88]:x
+buf[89]:t
+buf[90]:/
+buf[91]:h
+buf[92]:t
+buf[93]:m
+buf[94]:l
+buf[95]:,
+buf[96]:a
+buf[97]:p
+buf[98]:p
+buf[99]:l
+buf[100]:i
+buf[101]:c
+buf[102]:a
+buf[103]:t
+buf[104]:i
+buf[105]:o
+buf[106]:n
+buf[107]:/
+buf[108]:x
+buf[109]:h
+buf[110]:t
+buf[111]:m
+buf[112]:l
+buf[113]:+
+buf[114]:x
+buf[115]:m
+buf[116]:l
+buf[117]:,
+buf[118]:a
+buf[119]:p
+buf[120]:p
+buf[121]:l
+buf[122]:i
+buf[123]:c
+buf[124]:a
+buf[125]:t
+buf[126]:i
+buf[127]:o
+buf[128]:n
+buf[129]:/
+buf[130]:x
+buf[131]:m
+buf[132]:l
+buf[133]:;
+buf[134]:q
+buf[135]:=
+buf[136]:0
+buf[137]:.
+buf[138]:9
+buf[139]:,
+buf[140]:i
+buf[141]:m
+buf[142]:a
+buf[143]:g
+buf[144]:e
+buf[145]:/
+buf[146]:w
+buf[147]:e
+buf[148]:b
+buf[149]:p
+buf[150]:,
+buf[151]:*
+buf[152]:/
+buf[153]:*
+buf[154]:;
+buf[155]:q
+buf[156]:=
+buf[157]:0
+buf[158]:.
+buf[159]:8
+buf[160]:
+buf[161]:
+
+buf[162]:U
+buf[163]:s
+buf[164]:e
+buf[165]:r
+buf[166]:-
+buf[167]:A
+buf[168]:g
+buf[169]:e
+buf[170]:n
+buf[171]:t
+buf[172]::
+buf[173]: 
+buf[174]:M
+buf[175]:o
+buf[176]:z
+buf[177]:i
+buf[178]:l
+buf[179]:l
+buf[180]:a
+buf[181]:/
+buf[182]:5
+buf[183]:.
+buf[184]:0
+buf[185]: 
+buf[186]:(
+buf[187]:X
+buf[188]:1
+buf[189]:1
+buf[190]:;
+buf[191]: 
+buf[192]:L
+buf[193]:i
+buf[194]:n
+buf[195]:u
+buf[196]:x
+buf[197]: 
+buf[198]:x
+buf[199]:8
+buf[200]:6
+buf[201]:_
+buf[202]:6
+buf[203]:4
+buf[204]:)
+buf[205]: 
+buf[206]:A
+buf[207]:p
+buf[208]:p
+buf[209]:l
+buf[210]:e
+buf[211]:W
+buf[212]:e
+buf[213]:b
+buf[214]:K
+buf[215]:i
+buf[216]:t
+buf[217]:/
+buf[218]:5
+buf[219]:3
+buf[220]:7
+buf[221]:.
+buf[222]:3
+buf[223]:6
+buf[224]: 
+buf[225]:(
+buf[226]:K
+buf[227]:H
+buf[228]:T
+buf[229]:M
+buf[230]:L
+buf[231]:,
+buf[232]: 
+buf[233]:l
+buf[234]:i
+buf[235]:k
+buf[236]:e
+buf[237]: 
+buf[238]:G
+buf[239]:e
+buf[240]:c
+buf[241]:k
+buf[242]:o
+buf[243]:)
+buf[244]: 
+buf[245]:C
+buf[246]:h
+buf[247]:r
+buf[248]:o
+buf[249]:m
+buf[250]:e
+buf[251]:/
+buf[252]:3
+buf[253]:9
+buf[254]:.
+buf[255]:0
+buf[256]:.
+buf[257]:2
+buf[258]:1
+buf[259]:7
+buf[260]:1
+buf[261]:.
+buf[262]:9
+buf[263]:9
+buf[264]: 
+buf[265]:S
+buf[266]:a
+buf[267]:f
+buf[268]:a
+buf[269]:r
+buf[270]:i
+buf[271]:/
+buf[272]:5
+buf[273]:3
+buf[274]:7
+buf[275]:.
+buf[276]:3
+buf[277]:6
+buf[278]:
+buf[279]:
+
+buf[280]:A
+buf[281]:c
+buf[282]:c
+buf[283]:e
+buf[284]:p
+buf[285]:t
+buf[286]:-
+buf[287]:E
+buf[288]:n
+buf[289]:c
+buf[290]:o
+buf[291]:d
+buf[292]:i
+buf[293]:n
+buf[294]:g
+buf[295]::
+buf[296]: 
+buf[297]:g
+buf[298]:z
+buf[299]:i
+buf[300]:p
+buf[301]:,
+buf[302]: 
+buf[303]:d
+buf[304]:e
+buf[305]:f
+buf[306]:l
+buf[307]:a
+buf[308]:t
+buf[309]:e
+buf[310]:,
+buf[311]: 
+buf[312]:s
+buf[313]:d
+buf[314]:c
+buf[315]:h
+buf[316]:
+buf[317]:
+
+buf[318]:A
+buf[319]:c
+buf[320]:c
+buf[321]:e
+buf[322]:p
+buf[323]:t
+buf[324]:-
+buf[325]:L
+buf[326]:a
+buf[327]:n
+buf[328]:g
+buf[329]:u
+buf[330]:a
+buf[331]:g
+buf[332]:e
+buf[333]::
+buf[334]: 
+buf[335]:e
+buf[336]:n
+buf[337]:-
+buf[338]:U
+buf[339]:S
+buf[340]:,
+buf[341]:e
+buf[342]:n
+buf[343]:;
+buf[344]:q
+buf[345]:=
+buf[346]:0
+buf[347]:.
+buf[348]:8
+buf[349]:
+buf[350]:
+
+buf[351]:
+buf[352]:
+
+last one: 
+
+t:token_char G
+token: Matched rule 1 G.
+t:token_char E
+token: Matched rule 2. GE
+t:token_char T
+token: Matched rule 2. GET
+t:sp ' '; 
+t:backslash; 
+text: Matched rule 1 /.
+t:token_char ~
+OWS: Matched rule 1
+text: Matched rule 2 /~.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 /~p.
+t:token_char r
+OWS: Matched rule 1
+text: Matched rule 2 /~pr.
+t:token_char s
+OWS: Matched rule 1
+text: Matched rule 2 /~prs.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/1.
+t:digit 5; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15.
+t:token_char -
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-.
+t:digit 4; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-4.
+t:digit 4; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-44.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-441.
+t:token_char -
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-441-.
+t:token_char F
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-441-F.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-441-F1.
+t:digit 5; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-441-F15.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 /~prs/15-441-F15/.
+t:sp ' '; 
+t:token_char H
+text: Matched rule 1 H.
+t:token_char T
+OWS: Matched rule 1
+text: Matched rule 2 HT.
+t:token_char T
+OWS: Matched rule 1
+text: Matched rule 2 HTT.
+t:token_char P
+OWS: Matched rule 1
+text: Matched rule 2 HTTP.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 HTTP/.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 HTTP/1.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 HTTP/1..
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 HTTP/1.1.
+t:crlf; 
+request_Line:
+GET
+/~prs/15-441-F15/
+HTTP/1.1
+t:token_char H
+token: Matched rule 1 H.
+t:token_char o
+token: Matched rule 2. Ho
+t:token_char s
+token: Matched rule 2. Hos
+t:token_char t
+token: Matched rule 2. Host
+t:colon; 
+OWS: Matched rule 1
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char w
+text: Matched rule 1 w.
+t:token_char w
+OWS: Matched rule 1
+text: Matched rule 2 ww.
+t:token_char w
+OWS: Matched rule 1
+text: Matched rule 2 www.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 www..
+t:token_char c
+OWS: Matched rule 1
+text: Matched rule 2 www.c.
+t:token_char s
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 www.cs..
+t:token_char c
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.c.
+t:token_char m
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.cm.
+t:token_char u
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.cmu.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.cmu..
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.cmu.e.
+t:token_char d
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.cmu.ed.
+t:token_char u
+OWS: Matched rule 1
+text: Matched rule 2 www.cs.cmu.edu.
+t:crlf; 
+OWS: Matched rule 1
+request_Header:
+Host
+www.cs.cmu.edu
+ header_count:0
+t:token_char C
+token: Matched rule 1 C.
+t:token_char o
+token: Matched rule 2. Co
+t:token_char n
+token: Matched rule 2. Con
+t:token_char n
+token: Matched rule 2. Conn
+t:token_char e
+token: Matched rule 2. Conne
+t:token_char c
+token: Matched rule 2. Connec
+t:token_char t
+token: Matched rule 2. Connect
+t:token_char i
+token: Matched rule 2. Connecti
+t:token_char o
+token: Matched rule 2. Connectio
+t:token_char n
+token: Matched rule 2. Connection
+t:colon; 
+OWS: Matched rule 1
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char k
+text: Matched rule 1 k.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 ke.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 kee.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 keep.
+t:token_char -
+OWS: Matched rule 1
+text: Matched rule 2 keep-.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 keep-a.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 keep-al.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 keep-ali.
+t:token_char v
+OWS: Matched rule 1
+text: Matched rule 2 keep-aliv.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 keep-alive.
+t:crlf; 
+OWS: Matched rule 1
+request_Header:
+Connection
+keep-alive
+ header_count:1
+t:token_char A
+token: Matched rule 1 A.
+t:token_char c
+token: Matched rule 2. Ac
+t:token_char c
+token: Matched rule 2. Acc
+t:token_char e
+token: Matched rule 2. Acce
+t:token_char p
+token: Matched rule 2. Accep
+t:token_char t
+token: Matched rule 2. Accept
+t:colon; 
+OWS: Matched rule 1
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char t
+text: Matched rule 1 t.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 te.
+t:token_char x
+OWS: Matched rule 1
+text: Matched rule 2 tex.
+t:token_char t
+OWS: Matched rule 1
+text: Matched rule 2 text.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 text/.
+t:token_char h
+OWS: Matched rule 1
+text: Matched rule 2 text/h.
+t:token_char t
+OWS: Matched rule 1
+text: Matched rule 2 text/ht.
+t:token_char m
+OWS: Matched rule 1
+text: Matched rule 2 text/htm.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 text/html.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 text/html,.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 text/html,a.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 text/html,ap.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 text/html,app.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 text/html,appl.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 text/html,appli.
+t:token_char c
+OWS: Matched rule 1
+text: Matched rule 2 text/html,applic.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 text/html,applica.
+t:token_char t
+OWS: Matched rule 1
+text: Matched rule 2 text/html,applicat.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 text/html,applicati.
+t:token_char o
+OWS: Matched rule 1
+text: Matched rule 2 text/html,applicatio.
+t:token_char n
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/.
+t:token_char x
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/x.
+t:token_char h
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xh.
+t:token_char t
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xht.
+t:token_char m
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtm.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml.
+t:token_char +
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+.
+t:token_char x
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+x.
+t:token_char m
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xm.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,a.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,ap.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,app.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,appl.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,appli.
+t:token_char c
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,applic.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,applica.
+t:token_char t
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,applicat.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,applicati.
+t:token_char o
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,applicatio.
+t:token_char n
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/.
+t:token_char x
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/x.
+t:token_char m
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xm.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml.
+t:separators ';'
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;.
+t:token_char q
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q.
+t:separators '='
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=.
+t:digit 0; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0..
+t:digit 9; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,i.
+t:token_char m
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,im.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,ima.
+t:token_char g
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,imag.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/.
+t:token_char w
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/w.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/we.
+t:token_char b
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/web.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,.
+t:token_char *
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/.
+t:token_char *
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*.
+t:separators ';'
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;.
+t:token_char q
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q.
+t:separators '='
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=.
+t:digit 0; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0..
+t:digit 8; 
+OWS: Matched rule 1
+text: Matched rule 2 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8.
+t:crlf; 
+OWS: Matched rule 1
+request_Header:
+Accept
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+ header_count:2
+t:token_char U
+token: Matched rule 1 U.
+t:token_char s
+token: Matched rule 2. Us
+t:token_char e
+token: Matched rule 2. Use
+t:token_char r
+token: Matched rule 2. User
+t:token_char -
+token: Matched rule 2. User-
+t:token_char A
+token: Matched rule 2. User-A
+t:token_char g
+token: Matched rule 2. User-Ag
+t:token_char e
+token: Matched rule 2. User-Age
+t:token_char n
+token: Matched rule 2. User-Agen
+t:token_char t
+token: Matched rule 2. User-Agent
+t:colon; 
+OWS: Matched rule 1
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char M
+text: Matched rule 1 M.
+t:token_char o
+OWS: Matched rule 1
+text: Matched rule 2 Mo.
+t:token_char z
+OWS: Matched rule 1
+text: Matched rule 2 Moz.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 Mozi.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 Mozil.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 Mozill.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/.
+t:digit 5; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5..
+t:digit 0; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0.
+t:sp ' '; 
+OWS: Matched rule 2
+t:separators '('
+text: Matched rule 2 Mozilla/5.0 (.
+t:token_char X
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X1.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11.
+t:separators ';'
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11;.
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char L
+text: Matched rule 2 Mozilla/5.0 (X11; L.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Li.
+t:token_char n
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Lin.
+t:token_char u
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linu.
+t:token_char x
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux.
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char x
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x.
+t:digit 8; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x8.
+t:digit 6; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86.
+t:token_char _
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_.
+t:digit 6; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_6.
+t:digit 4; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64.
+t:separators ')'
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64).
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char A
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) A.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) Ap.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) App.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) Appl.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) Apple.
+t:token_char W
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleW.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWe.
+t:token_char b
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWeb.
+t:token_char K
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebK.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKi.
+t:token_char t
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/.
+t:digit 5; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/5.
+t:digit 3; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/53.
+t:digit 7; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537..
+t:digit 3; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.3.
+t:digit 6; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36.
+t:sp ' '; 
+OWS: Matched rule 2
+t:separators '('
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (.
+t:token_char K
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (K.
+t:token_char H
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KH.
+t:token_char T
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHT.
+t:token_char M
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTM.
+t:token_char L
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML,.
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char l
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, li.
+t:token_char k
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, lik.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like.
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char G
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like G.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge.
+t:token_char c
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gec.
+t:token_char k
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Geck.
+t:token_char o
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko.
+t:separators ')'
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko).
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char C
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) C.
+t:token_char h
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ch.
+t:token_char r
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr.
+t:token_char o
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chro.
+t:token_char m
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrom.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/.
+t:digit 3; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/3.
+t:digit 9; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39..
+t:digit 0; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0..
+t:digit 2; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.21.
+t:digit 7; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.217.
+t:digit 1; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171..
+t:digit 9; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.9.
+t:digit 9; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99.
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char S
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 S.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Sa.
+t:token_char f
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Saf.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safa.
+t:token_char r
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safar.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari.
+t:backslash; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/.
+t:digit 5; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/5.
+t:digit 3; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/53.
+t:digit 7; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537..
+t:digit 3; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.3.
+t:digit 6; 
+OWS: Matched rule 1
+text: Matched rule 2 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36.
+t:crlf; 
+OWS: Matched rule 1
+request_Header:
+User-Agent
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
+ header_count:3
+t:token_char A
+token: Matched rule 1 A.
+t:token_char c
+token: Matched rule 2. Ac
+t:token_char c
+token: Matched rule 2. Acc
+t:token_char e
+token: Matched rule 2. Acce
+t:token_char p
+token: Matched rule 2. Accep
+t:token_char t
+token: Matched rule 2. Accept
+t:token_char -
+token: Matched rule 2. Accept-
+t:token_char E
+token: Matched rule 2. Accept-E
+t:token_char n
+token: Matched rule 2. Accept-En
+t:token_char c
+token: Matched rule 2. Accept-Enc
+t:token_char o
+token: Matched rule 2. Accept-Enco
+t:token_char d
+token: Matched rule 2. Accept-Encod
+t:token_char i
+token: Matched rule 2. Accept-Encodi
+t:token_char n
+token: Matched rule 2. Accept-Encodin
+t:token_char g
+token: Matched rule 2. Accept-Encoding
+t:colon; 
+OWS: Matched rule 1
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char g
+text: Matched rule 1 g.
+t:token_char z
+OWS: Matched rule 1
+text: Matched rule 2 gz.
+t:token_char i
+OWS: Matched rule 1
+text: Matched rule 2 gzi.
+t:token_char p
+OWS: Matched rule 1
+text: Matched rule 2 gzip.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 gzip,.
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char d
+text: Matched rule 2 gzip, d.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 gzip, de.
+t:token_char f
+OWS: Matched rule 1
+text: Matched rule 2 gzip, def.
+t:token_char l
+OWS: Matched rule 1
+text: Matched rule 2 gzip, defl.
+t:token_char a
+OWS: Matched rule 1
+text: Matched rule 2 gzip, defla.
+t:token_char t
+OWS: Matched rule 1
+text: Matched rule 2 gzip, deflat.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 gzip, deflate.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 gzip, deflate,.
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char s
+text: Matched rule 2 gzip, deflate, s.
+t:token_char d
+OWS: Matched rule 1
+text: Matched rule 2 gzip, deflate, sd.
+t:token_char c
+OWS: Matched rule 1
+text: Matched rule 2 gzip, deflate, sdc.
+t:token_char h
+OWS: Matched rule 1
+text: Matched rule 2 gzip, deflate, sdch.
+t:crlf; 
+OWS: Matched rule 1
+request_Header:
+Accept-Encoding
+gzip, deflate, sdch
+ header_count:4
+t:token_char A
+token: Matched rule 1 A.
+t:token_char c
+token: Matched rule 2. Ac
+t:token_char c
+token: Matched rule 2. Acc
+t:token_char e
+token: Matched rule 2. Acce
+t:token_char p
+token: Matched rule 2. Accep
+t:token_char t
+token: Matched rule 2. Accept
+t:token_char -
+token: Matched rule 2. Accept-
+t:token_char L
+token: Matched rule 2. Accept-L
+t:token_char a
+token: Matched rule 2. Accept-La
+t:token_char n
+token: Matched rule 2. Accept-Lan
+t:token_char g
+token: Matched rule 2. Accept-Lang
+t:token_char u
+token: Matched rule 2. Accept-Langu
+t:token_char a
+token: Matched rule 2. Accept-Langua
+t:token_char g
+token: Matched rule 2. Accept-Languag
+t:token_char e
+token: Matched rule 2. Accept-Language
+t:colon; 
+OWS: Matched rule 1
+t:sp ' '; 
+OWS: Matched rule 2
+t:token_char e
+text: Matched rule 1 e.
+t:token_char n
+OWS: Matched rule 1
+text: Matched rule 2 en.
+t:token_char -
+OWS: Matched rule 1
+text: Matched rule 2 en-.
+t:token_char U
+OWS: Matched rule 1
+text: Matched rule 2 en-U.
+t:token_char S
+OWS: Matched rule 1
+text: Matched rule 2 en-US.
+t:separators ','
+OWS: Matched rule 1
+text: Matched rule 2 en-US,.
+t:token_char e
+OWS: Matched rule 1
+text: Matched rule 2 en-US,e.
+t:token_char n
+OWS: Matched rule 1
+text: Matched rule 2 en-US,en.
+t:separators ';'
+OWS: Matched rule 1
+text: Matched rule 2 en-US,en;.
+t:token_char q
+OWS: Matched rule 1
+text: Matched rule 2 en-US,en;q.
+t:separators '='
+OWS: Matched rule 1
+text: Matched rule 2 en-US,en;q=.
+t:digit 0; 
+OWS: Matched rule 1
+text: Matched rule 2 en-US,en;q=0.
+t:dot; 
+OWS: Matched rule 1
+text: Matched rule 2 en-US,en;q=0..
+t:digit 8; 
+OWS: Matched rule 1
+text: Matched rule 2 en-US,en;q=0.8.
+t:crlf; 
+OWS: Matched rule 1
+request_Header:
+Accept-Language
+en-US,en;q=0.8
+ header_count:5
+t:crlf; 
+Empty body.
+parsing_request (with message body): Matched Success.
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /~prs/15-441-F15/
+header_count: 6
+Request Header
+Header name Host Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name  Header Value 
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, sdch
+Request Header
+Header name Accept-Language Header Value en-US,en;q=0.8
+Body: 
+Finished parsing!

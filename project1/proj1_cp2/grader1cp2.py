@@ -43,9 +43,10 @@ class project1cp2tester(tester):
         #self.pAssertEqual(headers['Connection'].lower(), 'close')
 
         if response_type == 'GET' or response_type == 'HEAD':
-            header_set = set(['connection', 'content-length',
-                              'date', 'last-modified',
-                              'server', 'content-type'])
+            header_set = set(['Connection', 'Content-Length',
+                              'Date', 'Last-Modified',
+                              'Server', 'Content-Type'])
+            print headers.keys()
             self.pAssertEqual(set(), header_set - set(headers.keys()))
             if headers['Content-Type'].lower() != MIME[ext]:
                 print 'MIME got %s expected %s'\
@@ -108,8 +109,8 @@ class project1cp2tester(tester):
             #print self.testsuite.tests[test]
             #print "Response"
             #print response
-            print response.headers
-            print response.content
+            #print response.headers
+            #print response.content
             #print response.headers['content-type']
             self.pAssertEqual(contenthash, self.testsuite.tests[test][0])
         self.testsuite.scores['test_GET'] = 1

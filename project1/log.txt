@@ -8,303 +8,49 @@
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:25 GMT
-[DEBUG] real content_length:301, resut:301
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:35 GMT
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:25 GMT
+Date: Fri, 20 Jul 2018 03:44:35 GMT
 Server: Liso/1.0
 Content-Length: 301
 Content-Type: text/css
 Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:25 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:25 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:27 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:27 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36 Header Value 
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:27 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:27 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:28 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:28 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name Gecko) Chrome/39.0.2171.99 Safari/537.36 Header Value 
-Request Header
-Header name  Header Value AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:28 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:28 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:35 GMT
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:35 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
 
 Http Method HEAD
 Http Version HTTP/1.1
 Http Uri /style.css
 header_count: 5
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value Gecko) Chrome/39.0.2171.99 Safari/537.36
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
+Body: 
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:35 GMT
+Date: Fri, 20 Jul 2018 03:44:35 GMT
 Server: Liso/1.0
 Content-Length: 301
 Content-Type: text/css
 Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
 
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:35 GMT
+Date: Fri, 20 Jul 2018 03:44:35 GMT
 Server: Liso/1.0
 Content-Length: 301
 Content-Type: text/css
 Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
 
 [ERROR] Error sending to client.
 [INFO]: Sending size 187
@@ -316,131 +62,211 @@ a { color: #808080; text-decoration: none; }
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:36 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:35 GMT
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value i/537.36
-Request Header
-Header name  Header Value Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 187
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:36 GMT
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:35 GMT
 Server: Liso/1.0
 Content-Length: 17431
 Content-Type: image/png
 Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-tify; margin-top: 25px; }
+
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /images/liso_header.png
+header_count: 5
+Request Header
+Header name Host Header Value localhost:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Body: ˜
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:35 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-a { color: #808080; text-decoration: none; }
+
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:35 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-#page { width: 800px; margin: auto; }
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 190
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:35 GMT
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:35 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /index.html
+header_count: 5
+Request Header
+Header name Host Header Value localhost:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Body: òAo|”
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:35 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:35 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 188
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:36 GMT
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:36 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
+
+Http Method HEAD
+Http Version HTTP/1.1
+Http Uri /style.css
+header_count: 5
+Request Header
+Header name Host Header Value localhost:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate
+Request Header
+Header name Accept Header Value */*
+Request Header
+Header name User-Agent Header Value python-requests/2.19.1
+Body: ∞¸
+Finished parsing!
+[DEBUG] handle_request resp_buf:HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:36 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
+
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:36 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
+
+[ERROR] Error sending to client.
+[INFO]: Sending size 187
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock 5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:36 GMT
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:36 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
 
 Http Method HEAD
 Http Version HTTP/1.1
 Http Uri /images/liso_header.png
 header_count: 5
 Request Header
-Header name Host Header Value i/537.36
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
+Body: ˝
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 17431
 Content-Type: image/png
 Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-tify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
 
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 17431
 Content-Type: image/png
 Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-tify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
 
 [ERROR] Error sending to client.
 [INFO]: Sending size 190
@@ -452,49 +278,50 @@ a { color: #808080; text-decoration: none; }
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:36 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:36 GMT
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
 Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-òå^ö£À+{çzö=0’ëê|[Yˆb¯$∆gBe2‰«h<©ç˛ûtOüöâ!
+
 Http Method HEAD
 Http Version HTTP/1.1
 Http Uri /index.html
 header_count: 5
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
+Body: òAo|”
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
 Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-òå^ö£À+{çzö=0’ëê|[Yˆb¯$∆gBe2‰«h<©ç˛ûtOüöâ!
+
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
 Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-òå^ö£À+{çzö=0’ëê|[Yˆb¯$∆gBe2‰«h<©ç˛ûtOüöâ!
+
 [ERROR] Error sending to client.
 [INFO]: Sending size 188
 [INFO]: Start select!
@@ -505,90 +332,43 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:36 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:36 GMT
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
 Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
->Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
 
 Http Method HEAD
 Http Version HTTP/1.1
 Http Uri /index.html
 header_count: 2
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
 Header name Connection Header Value Keep-Alive
+Body:  Ä
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
 Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
->Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
 
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:36 GMT
+Date: Fri, 20 Jul 2018 03:44:36 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
 Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
->Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
 
 [ERROR] Error sending to client.
 [INFO]: Sending size 188
@@ -600,11 +380,11 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:37 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:37 GMT
 [DEBUG] real content_length:301, resut:301
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 301
 Content-Type: text/css
@@ -624,19 +404,20 @@ Http Version HTTP/1.1
 Http Uri /style.css
 header_count: 5
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
+Body: ®Bo|”
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 301
 Content-Type: text/css
@@ -653,7 +434,7 @@ a { color: #808080; text-decoration: none; }
 
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 301
 Content-Type: text/css
@@ -678,11 +459,11 @@ a { color: #808080; text-decoration: none; }
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:37 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:37 GMT
 [DEBUG] real content_length:17431, resut:17431
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 17431
 Content-Type: image/png
@@ -696,19 +477,20 @@ Http Version HTTP/1.1
 Http Uri /images/liso_header.png
 header_count: 5
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
+Body: xBo|”
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 17431
 Content-Type: image/png
@@ -719,7 +501,7 @@ Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
 [ERROR] No moew than BUF_SIZE:4096, current:17621[DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 17431
 Content-Type: image/png
@@ -738,11 +520,11 @@ Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:37 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:37 GMT
 [DEBUG] real content_length:802, resut:802
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
@@ -768,25 +550,26 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
     </body>
 
 </html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
+
 Http Method GET
 Http Version HTTP/1.1
 Http Uri /index.html
 header_count: 5
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
+Body: òAo|”
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
@@ -812,10 +595,10 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
     </body>
 
 </html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
+
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
@@ -841,7 +624,7 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
     </body>
 
 </html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
+
 [ERROR] Error sending to client.
 [INFO]: Sending size 990
 [INFO]: Start select!
@@ -852,11 +635,11 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 [INFO]: Start sending msg
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:37 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:37 GMT
 [DEBUG] real content_length:802, resut:802
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
@@ -888,13 +671,14 @@ Http Version HTTP/1.1
 Http Uri /index.html
 header_count: 2
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
 Header name Connection Header Value Keep-Alive
+Body: ËBo|”
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
@@ -923,7 +707,7 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:37 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
@@ -958,160 +742,169 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:38 GMT
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:38 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
+dummy data
 Http Method POST
 Http Version HTTP/1.1
 Http Uri /style.css
 header_count: 6
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
 Request Header
 Header name Content-Length Header Value 10
+Body: dummy data
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:38 GMT
 Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
+dummy data
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:38 GMT
+Server: Liso/1.0
+Content-Length: 301
+Content-Type: text/css
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
+dummy data
+[ERROR] Error sending to client.
+[INFO]: Sending size 197
+[INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:38 GMT
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:38 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
+dummy data
 Http Method POST
 Http Version HTTP/1.1
 Http Uri /images/liso_header.png
 header_count: 6
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
 Request Header
 Header name Content-Length Header Value 10
+Body: dummy data
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:38 GMT
 Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
+dummy data
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:38 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
 
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
+dummy data
+[ERROR] Error sending to client.
+[INFO]: Sending size 200
+[INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: Start sending msg
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:38 GMT
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:38 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+dummy data
 Http Method POST
 Http Version HTTP/1.1
 Http Uri /index.html
 header_count: 6
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
 Request Header
 Header name Content-Length Header Value 10
+Body: dummy data
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:37 GMT
+Date: Fri, 20 Jul 2018 03:44:38 GMT
 Server: Liso/1.0
 Content-Length: 802
 Content-Type: text/html
 Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
+dummy data
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Fri, 20 Jul 2018 03:44:38 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
+dummy data
+[ERROR] Error sending to client.
+[INFO]: Sending size 198
+[INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
@@ -1119,10 +912,10 @@ Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 [INFO]: Start sending msg
 status_line:HTTP/1.1 404 
 
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:39 GMT
+[DEBUG] Current date:Fri, 20 Jul 2018 03:44:39 GMT
 [DEBUG] handle_get: HTTP/1.1 404 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:39 GMT
+Date: Fri, 20 Jul 2018 03:44:39 GMT
 Server: Liso/1.0
 Content-Length: 0
 Content-Type: text/html
@@ -1133,19 +926,20 @@ Http Version HTTP/1.1
 Http Uri /bad.html
 header_count: 5
 Request Header
-Header name Host Header Value 
+Header name Host Header Value localhost:9999
 Request Header
-Header name  Header Value 
+Header name Connection Header Value keep-alive
 Request Header
-Header name  Header Value 
+Header name Accept-Encoding Header Value gzip, deflate
 Request Header
 Header name Accept Header Value */*
 Request Header
 Header name User-Agent Header Value python-requests/2.19.1
+Body:  [Ç
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 404 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:39 GMT
+Date: Fri, 20 Jul 2018 03:44:39 GMT
 Server: Liso/1.0
 Content-Length: 0
 Content-Type: text/html
@@ -1153,7 +947,7 @@ Content-Type: text/html
 
 [DEBUUG] Sending :HTTP/1.1 404 
 Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:39 GMT
+Date: Fri, 20 Jul 2018 03:44:39 GMT
 Server: Liso/1.0
 Content-Length: 0
 Content-Type: text/html
@@ -1161,1097 +955,4 @@ Content-Type: text/html
 
 [ERROR] Error sending to client.
 [INFO]: Sending size 140
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:44 GMT
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:44 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:44 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:44 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 187
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:45 GMT
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 2.19.1
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 187
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:45 GMT
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 17431
-Content-Type: image/png
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-tify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /images/liso_header.png
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 17431
-Content-Type: image/png
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-tify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 17431
-Content-Type: image/png
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-tify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 190
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:45 GMT
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 188
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:45 GMT
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
->Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 2
-Request Header
-Header name Host Header Value 
-Request Header
-Header name Connection Header Value Keep-Alive
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
->Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:45 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
->Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 188
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:46 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
- see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
- see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
- see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:46 GMT
-[DEBUG] real content_length:17431, resut:17431
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 17431
-Content-Type: image/png
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-âPNG
-
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /images/liso_header.png
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 17431
-Content-Type: image/png
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-âPNG
-
-
-[ERROR] No moew than BUF_SIZE:4096, current:17621[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 17431
-Content-Type: image/png
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-âPNG
-
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 17621
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:46 GMT
-[DEBUG] real content_length:802, resut:802
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 990
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:46 GMT
-[DEBUG] real content_length:802, resut:802
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 2
-Request Header
-Header name Host Header Value 
-Request Header
-Header name Connection Header Value Keep-Alive
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
-[ERROR] Error sending to client.
-[INFO]: Sending size 990
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /images/liso_header.png
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /index.html
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Request Header
-Header name Content-Length Header Value 10
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:46 GMT
-Server: Liso/1.0
-Content-Length: 802
-Content-Type: text/html
-Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
-
-<!DOCTYPE html> 
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Liso the Friendly Web Server</title>
-        <link rel="stylesheet" type="text/css" href="style.css" /> 
-    </head>
-
-    <body>
-        <div id="page">
-            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
-            <p>Welcome to the Liso 1.0 web server.  If you see this page then
-               congratulations!  Your Liso web server is up and running now!</p>
-            <p>This Liso web server was implemented by: xxxxxxx
-               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
-                    </a>&#62;</p>
-        </div>
-    </body>
-
-</html>
-!ÑB!ÑB!ÑB!ÑB!ÑB!ÑB!Ñ2∆øıyÑØ(
-[INFO]: Sending size 0
-[INFO]: close connection![INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 404 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:48 GMT
-[DEBUG] handle_get: HTTP/1.1 404 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:48 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type: text/html
-
-
-Http Method HEAD
-Http Version HTTP/1.1
-Http Uri /bad.html
-header_count: 5
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name Accept Header Value */*
-Request Header
-Header name User-Agent Header Value python-requests/2.19.1
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 404 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:48 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type: text/html
-
-
-[DEBUUG] Sending :HTTP/1.1 404 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:48 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type: text/html
-
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 140
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:52 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:52 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:52 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:52 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Tue, 17 Jul 2018 10:51:54 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:54 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name  Header Value 
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:54 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Tue, 17 Jul 2018 10:51:54 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
 [INFO]: Start select!

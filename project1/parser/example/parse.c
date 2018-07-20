@@ -29,7 +29,7 @@ Request * parse(char *buffer, int size, int socketFd) {
 
 		ch = buffer[i++];
 		buf[offset++] = ch;
-		//printf("buf[%d]:%c\n", offset-1, buf[offset-1]);
+		printf("buf[%d]:%c\n", offset-1, buf[offset-1]);
 
 		switch (state) {
 		case STATE_START:
@@ -60,14 +60,14 @@ Request * parse(char *buffer, int size, int socketFd) {
 		while(i != size){
 			ch = buffer[i++];
 			buf[offset++] = ch;
-			//printf("buf[%d]:%c %d\n", offset-1, buf[offset-1], (int)(buf[offset-1]));
+			printf("buf[%d]:%c %d\n", offset-1, buf[offset-1], (int)(buf[offset-1]));
 		}
 	}
 
 	// remove \0
 	while(i>=1 && buf[i-1] == '\0'){
 		i--;
-		//printf("remove buf[%d]: %c", i, buf[i]);
+		printf("remove buf[%d]: %c", i, buf[i]);
 	}
 
 	// strip only \n
@@ -87,7 +87,7 @@ Request * parse(char *buffer, int size, int socketFd) {
 		//request->suc = 1;
     //TODO You will need to handle resizing this in parser.y
 		//printf("Buf: %s\n", buf);
-		//printf("last one: %c\n", buf[i-1]);
+		printf("last one: %c\n", buf[i-1]);
     request->headers = (Request_header *) malloc(sizeof(Request_header)*1);
 		set_parsing_options(buf, i, request);
 

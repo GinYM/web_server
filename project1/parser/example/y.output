@@ -1,0 +1,539 @@
+Terminals unused in grammar
+
+   t_lws
+
+
+State 25 conflicts: 6 shift/reduce
+
+
+Grammar
+
+    0 $accept: request $end
+
+    1 allowed_char_for_token: t_token_char
+    2                       | t_digit
+    3                       | t_dot
+
+    4 allowed_char_for_octet: allowed_char_for_token
+    5                       | t_ctl
+    6                       | t_separators
+    7                       | t_sp
+
+    8 token: allowed_char_for_token
+    9      | token allowed_char_for_token
+
+   10 all_octet: allowed_char_for_octet
+   11          | all_octet allowed_char_for_octet
+
+   12 allowed_char_for_text: allowed_char_for_token
+   13                      | t_separators
+   14                      | t_colon
+   15                      | t_backslash
+
+   16 text: allowed_char_for_text
+   17     | text ows allowed_char_for_text
+
+   18 ows: %empty
+   19    | t_sp
+   20    | t_ws
+
+   21 request_line: token t_sp text t_sp text t_crlf
+
+   22 request_header: token ows t_colon ows text ows t_crlf
+
+   23 request_header_all: %empty
+   24                   | request_header request_header_all
+
+   25 message_body: %empty
+   26             | all_octet
+
+   27 request: request_line request_header_all t_crlf message_body
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+t_crlf (258) 21 22 27
+t_backslash (259) 15
+t_digit (260) 2
+t_dot (261) 3
+t_token_char (262) 1
+t_lws (263)
+t_colon (264) 14 22
+t_separators (265) 6 13
+t_sp (266) 7 19 21
+t_ws (267) 20
+t_ctl (268) 5
+
+
+Nonterminals, with rules where they appear
+
+$accept (14)
+    on left: 0
+allowed_char_for_token (15)
+    on left: 1 2 3, on right: 4 8 9 12
+allowed_char_for_octet (16)
+    on left: 4 5 6 7, on right: 10 11
+token (17)
+    on left: 8 9, on right: 9 21 22
+all_octet (18)
+    on left: 10 11, on right: 11 26
+allowed_char_for_text (19)
+    on left: 12 13 14 15, on right: 16 17
+text (20)
+    on left: 16 17, on right: 17 21 22
+ows (21)
+    on left: 18 19 20, on right: 17 22
+request_line (22)
+    on left: 21, on right: 27
+request_header (23)
+    on left: 22, on right: 24
+request_header_all (24)
+    on left: 23 24, on right: 24 27
+message_body (25)
+    on left: 25 26, on right: 27
+request (26)
+    on left: 27, on right: 0
+
+
+State 0
+
+    0 $accept: . request $end
+
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+
+    allowed_char_for_token  go to state 4
+    token                   go to state 5
+    request_line            go to state 6
+    request                 go to state 7
+
+
+State 1
+
+    2 allowed_char_for_token: t_digit .
+
+    $default  reduce using rule 2 (allowed_char_for_token)
+
+
+State 2
+
+    3 allowed_char_for_token: t_dot .
+
+    $default  reduce using rule 3 (allowed_char_for_token)
+
+
+State 3
+
+    1 allowed_char_for_token: t_token_char .
+
+    $default  reduce using rule 1 (allowed_char_for_token)
+
+
+State 4
+
+    8 token: allowed_char_for_token .
+
+    $default  reduce using rule 8 (token)
+
+
+State 5
+
+    9 token: token . allowed_char_for_token
+   21 request_line: token . t_sp text t_sp text t_crlf
+
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_sp          shift, and go to state 8
+
+    allowed_char_for_token  go to state 9
+
+
+State 6
+
+   27 request: request_line . request_header_all t_crlf message_body
+
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+
+    $default  reduce using rule 23 (request_header_all)
+
+    allowed_char_for_token  go to state 4
+    token                   go to state 10
+    request_header          go to state 11
+    request_header_all      go to state 12
+
+
+State 7
+
+    0 $accept: request . $end
+
+    $end  shift, and go to state 13
+
+
+State 8
+
+   21 request_line: token t_sp . text t_sp text t_crlf
+
+    t_backslash   shift, and go to state 14
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_colon       shift, and go to state 15
+    t_separators  shift, and go to state 16
+
+    allowed_char_for_token  go to state 17
+    allowed_char_for_text   go to state 18
+    text                    go to state 19
+
+
+State 9
+
+    9 token: token allowed_char_for_token .
+
+    $default  reduce using rule 9 (token)
+
+
+State 10
+
+    9 token: token . allowed_char_for_token
+   22 request_header: token . ows t_colon ows text ows t_crlf
+
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_sp          shift, and go to state 20
+    t_ws          shift, and go to state 21
+
+    $default  reduce using rule 18 (ows)
+
+    allowed_char_for_token  go to state 9
+    ows                     go to state 22
+
+
+State 11
+
+   24 request_header_all: request_header . request_header_all
+
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+
+    $default  reduce using rule 23 (request_header_all)
+
+    allowed_char_for_token  go to state 4
+    token                   go to state 10
+    request_header          go to state 11
+    request_header_all      go to state 23
+
+
+State 12
+
+   27 request: request_line request_header_all . t_crlf message_body
+
+    t_crlf  shift, and go to state 24
+
+
+State 13
+
+    0 $accept: request $end .
+
+    $default  accept
+
+
+State 14
+
+   15 allowed_char_for_text: t_backslash .
+
+    $default  reduce using rule 15 (allowed_char_for_text)
+
+
+State 15
+
+   14 allowed_char_for_text: t_colon .
+
+    $default  reduce using rule 14 (allowed_char_for_text)
+
+
+State 16
+
+   13 allowed_char_for_text: t_separators .
+
+    $default  reduce using rule 13 (allowed_char_for_text)
+
+
+State 17
+
+   12 allowed_char_for_text: allowed_char_for_token .
+
+    $default  reduce using rule 12 (allowed_char_for_text)
+
+
+State 18
+
+   16 text: allowed_char_for_text .
+
+    $default  reduce using rule 16 (text)
+
+
+State 19
+
+   17 text: text . ows allowed_char_for_text
+   21 request_line: token t_sp text . t_sp text t_crlf
+
+    t_sp  shift, and go to state 25
+    t_ws  shift, and go to state 21
+
+    $default  reduce using rule 18 (ows)
+
+    ows  go to state 26
+
+
+State 20
+
+   19 ows: t_sp .
+
+    $default  reduce using rule 19 (ows)
+
+
+State 21
+
+   20 ows: t_ws .
+
+    $default  reduce using rule 20 (ows)
+
+
+State 22
+
+   22 request_header: token ows . t_colon ows text ows t_crlf
+
+    t_colon  shift, and go to state 27
+
+
+State 23
+
+   24 request_header_all: request_header request_header_all .
+
+    $default  reduce using rule 24 (request_header_all)
+
+
+State 24
+
+   27 request: request_line request_header_all t_crlf . message_body
+
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_separators  shift, and go to state 28
+    t_sp          shift, and go to state 29
+    t_ctl         shift, and go to state 30
+
+    $default  reduce using rule 25 (message_body)
+
+    allowed_char_for_token  go to state 31
+    allowed_char_for_octet  go to state 32
+    all_octet               go to state 33
+    message_body            go to state 34
+
+
+State 25
+
+   19 ows: t_sp .
+   21 request_line: token t_sp text t_sp . text t_crlf
+
+    t_backslash   shift, and go to state 14
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_colon       shift, and go to state 15
+    t_separators  shift, and go to state 16
+
+    t_backslash   [reduce using rule 19 (ows)]
+    t_digit       [reduce using rule 19 (ows)]
+    t_dot         [reduce using rule 19 (ows)]
+    t_token_char  [reduce using rule 19 (ows)]
+    t_colon       [reduce using rule 19 (ows)]
+    t_separators  [reduce using rule 19 (ows)]
+
+    allowed_char_for_token  go to state 17
+    allowed_char_for_text   go to state 18
+    text                    go to state 35
+
+
+State 26
+
+   17 text: text ows . allowed_char_for_text
+
+    t_backslash   shift, and go to state 14
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_colon       shift, and go to state 15
+    t_separators  shift, and go to state 16
+
+    allowed_char_for_token  go to state 17
+    allowed_char_for_text   go to state 36
+
+
+State 27
+
+   22 request_header: token ows t_colon . ows text ows t_crlf
+
+    t_sp  shift, and go to state 20
+    t_ws  shift, and go to state 21
+
+    $default  reduce using rule 18 (ows)
+
+    ows  go to state 37
+
+
+State 28
+
+    6 allowed_char_for_octet: t_separators .
+
+    $default  reduce using rule 6 (allowed_char_for_octet)
+
+
+State 29
+
+    7 allowed_char_for_octet: t_sp .
+
+    $default  reduce using rule 7 (allowed_char_for_octet)
+
+
+State 30
+
+    5 allowed_char_for_octet: t_ctl .
+
+    $default  reduce using rule 5 (allowed_char_for_octet)
+
+
+State 31
+
+    4 allowed_char_for_octet: allowed_char_for_token .
+
+    $default  reduce using rule 4 (allowed_char_for_octet)
+
+
+State 32
+
+   10 all_octet: allowed_char_for_octet .
+
+    $default  reduce using rule 10 (all_octet)
+
+
+State 33
+
+   11 all_octet: all_octet . allowed_char_for_octet
+   26 message_body: all_octet .
+
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_separators  shift, and go to state 28
+    t_sp          shift, and go to state 29
+    t_ctl         shift, and go to state 30
+
+    $default  reduce using rule 26 (message_body)
+
+    allowed_char_for_token  go to state 31
+    allowed_char_for_octet  go to state 38
+
+
+State 34
+
+   27 request: request_line request_header_all t_crlf message_body .
+
+    $default  reduce using rule 27 (request)
+
+
+State 35
+
+   17 text: text . ows allowed_char_for_text
+   21 request_line: token t_sp text t_sp text . t_crlf
+
+    t_crlf  shift, and go to state 39
+    t_sp    shift, and go to state 20
+    t_ws    shift, and go to state 21
+
+    $default  reduce using rule 18 (ows)
+
+    ows  go to state 26
+
+
+State 36
+
+   17 text: text ows allowed_char_for_text .
+
+    $default  reduce using rule 17 (text)
+
+
+State 37
+
+   22 request_header: token ows t_colon ows . text ows t_crlf
+
+    t_backslash   shift, and go to state 14
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_colon       shift, and go to state 15
+    t_separators  shift, and go to state 16
+
+    allowed_char_for_token  go to state 17
+    allowed_char_for_text   go to state 18
+    text                    go to state 40
+
+
+State 38
+
+   11 all_octet: all_octet allowed_char_for_octet .
+
+    $default  reduce using rule 11 (all_octet)
+
+
+State 39
+
+   21 request_line: token t_sp text t_sp text t_crlf .
+
+    $default  reduce using rule 21 (request_line)
+
+
+State 40
+
+   17 text: text . ows allowed_char_for_text
+   22 request_header: token ows t_colon ows text . ows t_crlf
+
+    t_sp  shift, and go to state 20
+    t_ws  shift, and go to state 21
+
+    $default  reduce using rule 18 (ows)
+
+    ows  go to state 41
+
+
+State 41
+
+   17 text: text ows . allowed_char_for_text
+   22 request_header: token ows t_colon ows text ows . t_crlf
+
+    t_crlf        shift, and go to state 42
+    t_backslash   shift, and go to state 14
+    t_digit       shift, and go to state 1
+    t_dot         shift, and go to state 2
+    t_token_char  shift, and go to state 3
+    t_colon       shift, and go to state 15
+    t_separators  shift, and go to state 16
+
+    allowed_char_for_token  go to state 17
+    allowed_char_for_text   go to state 36
+
+
+State 42
+
+   22 request_header: token ows t_colon ows text ows t_crlf .
+
+    $default  reduce using rule 22 (request_header)
