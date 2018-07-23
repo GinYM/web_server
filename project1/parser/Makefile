@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-I.
-DEPS = parse.h y.tab.h
+DEPS = parse.h y.tab.h ../util/util.*
 OBJ = y.tab.o lex.yy.o parse.o example.o
 FLAGS = -g -Wall
 

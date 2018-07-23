@@ -16,6 +16,9 @@ Request * parse(char *buffer, int size, int socketFd) {
 	char buf[8192];
 	memset(buf, 0, 8192);
 
+	print_log("Parsing:\n");
+	print_log("%s\n", buffer);
+
 	//printf("buffer %s\n", buffer);
 
 	state = STATE_START;

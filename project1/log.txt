@@ -6,553 +6,205 @@
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: Start sending msg
+Parsing:
+GET / HTTP/1.1
+Host: 21f496s987.51mypc.cn:24790
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+If-Modified-Since: Wed, 28 Sep 2011 19:56:11 GMT
+
+
 status_line:HTTP/1.1 200 
 
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:04 GMT
-[DEBUG] real content_length:301, resut:301
+[DEBUG] Current date:Sun, 22 Jul 2018 03:48:02 GMT
+[DEBUG] real content_length:802, resut:802
 [DEBUG] handle_get: HTTP/1.1 200 
 Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:04 GMT
+Date: Sun, 22 Jul 2018 03:48:02 GMT
 Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-a { color: #808080; text-decoration: none; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
-#page { width: 800px; margin: auto; }
+</html>
 
 Http Method GET
 Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
+Http Uri /
+header_count: 9
 Request Header
-Header name Host Header Value www.cs.cmu.edu
+Header name Host Header Value 21f496s987.51mypc.cn:24790
 Request Header
 Header name Connection Header Value keep-alive
 Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Header name Cache-Control Header Value max-age=0
 Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
+Header name Upgrade-Insecure-Requests Header Value 1
 Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
 Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
+Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Request Header
+Header name If-Modified-Since Header Value Wed, 28 Sep 2011 19:56:11 GMT
 Body: 
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 200 
 Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:04 GMT
+Date: Sun, 22 Jul 2018 03:48:02 GMT
 Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-a { color: #808080; text-decoration: none; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
-#page { width: 800px; margin: auto; }
+</html>
 
 [DEBUUG] Sending :HTTP/1.1 200 
 Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:04 GMT
+Date: Sun, 22 Jul 2018 03:48:02 GMT
 Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
 
-a { color: #808080; text-decoration: none; }
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
 
-#page { width: 800px; margin: auto; }
+</html>
 
 [ERROR] Error sending to client.
-[INFO]: Sending size 488
+[INFO]: Sending size 990
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:05 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
+Parsing:
+GET /favicon.ico HTTP/1.1
+Host: 192.168.1.102:9999
 Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:05 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.1.102:9999/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
 
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
 
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value www.cs.cmu.edu
-Request Header
-Header name Connection Header Value keep-alive
-Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Body: ò¡ÀÌk
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:05 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:05 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:06 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:06 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value www.cs.cmu.edu
-Request Header
-Header name Connection Header Value keep-alive
-Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Body: ò¡ÀÌk
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:06 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:06 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:07 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:07 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value www.cs.cmu.edu
-Request Header
-Header name Connection Header Value keep-alive
-Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Body: ò¡ÀÌk
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:07 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:07 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 200 
-
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:11 GMT
-[DEBUG] real content_length:301, resut:301
-[DEBUG] handle_get: HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:11 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-Http Method GET
-Http Version HTTP/1.1
-Http Uri /style.css
-header_count: 6
-Request Header
-Header name Host Header Value www.cs.cmu.edu
-Request Header
-Header name Connection Header Value keep-alive
-Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Body: ò¡ÀÌk
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:11 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[DEBUUG] Sending :HTTP/1.1 200 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:11 GMT
-Server: Liso/1.0
-Content-Length: 301
-Content-Type: text/css
-Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
-
-body {  background-color: #000; font-family: Serif; font-size: 1.2em;
-        color: #fff; text-shadow: #808080 0.1em 0.1em 0.2em; }
-img { display: block; margin: auto; }
-p { text-align: justify; margin-top: 25px; }
-
-a { color: #808080; text-decoration: none; }
-
-#page { width: 800px; margin: auto; }
-
-[ERROR] Error sending to client.
-[INFO]: Sending size 488
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
 status_line:HTTP/1.1 404 
 
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:56 GMT
+[DEBUG] Current date:Sun, 22 Jul 2018 06:58:02 GMT
 [DEBUG] handle_get: HTTP/1.1 404 
 Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:56 GMT
+Date: Sun, 22 Jul 2018 06:58:02 GMT
 Server: Liso/1.0
 Content-Length: 0
 Content-Type
-Hello World!
-Http Method POST
+
+Http Method GET
 Http Version HTTP/1.1
-Http Uri /~prs/15-441-F15/
-header_count: 6
+Http Uri /favicon.ico
+header_count: 7
 Request Header
-Header name Host Header Value www.cs.cmu.edu
+Header name Host Header Value 192.168.1.102:9999
 Request Header
 Header name Connection Header Value keep-alive
 Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
 Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
+Header name Accept Header Value image/webp,image/apng,image/*,*/*;q=0.8
 Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
+Header name Referer Header Value http://192.168.1.102:9999/
 Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Body: Hello World!
+Header name Accept-Encoding Header Value gzip, deflate
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Body: ®ÅØ]
+
 Finished parsing!
 [DEBUG] handle_request resp_buf:HTTP/1.1 404 
 Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:56 GMT
+Date: Sun, 22 Jul 2018 06:58:02 GMT
 Server: Liso/1.0
 Content-Length: 0
 Content-Type
-Hello World!
+
 [DEBUUG] Sending :HTTP/1.1 404 
 Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:56 GMT
+Date: Sun, 22 Jul 2018 06:58:02 GMT
 Server: Liso/1.0
 Content-Length: 0
 Content-Type
-Hello World!
+
 [ERROR] Error sending to client.
-[INFO]: Sending size 139
+[INFO]: Sending size 127
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: new sock 5
 [INFO]: Start select!
 [INFO]: After select!
 [INFO]: Start sending msg
-status_line:HTTP/1.1 404 
-
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:58 GMT
-[DEBUG] handle_get: HTTP/1.1 404 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:58 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type
-Hello World!
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /~prs/15-441-F15/
-header_count: 6
-Request Header
-Header name Host Header Value www.cs.cmu.edu
-Request Header
-Header name Connection Header Value keep-alive
-Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Body: Hello World!
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 404 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:58 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type
-Hello World!
-[DEBUUG] Sending :HTTP/1.1 404 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:58 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type
-Hello World!
-[ERROR] Error sending to client.
-[INFO]: Sending size 139
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: new sock 5
-[INFO]: Start select!
-[INFO]: After select!
-[INFO]: Start sending msg
-status_line:HTTP/1.1 404 
-
-[DEBUG] Current date:Fri, 20 Jul 2018 13:09:58 GMT
-[DEBUG] handle_get: HTTP/1.1 404 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:58 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type
-Hello World!
-Http Method POST
-Http Version HTTP/1.1
-Http Uri /~prs/15-441-F15/
-header_count: 6
-Request Header
-Header name Host Header Value www.cs.cmu.edu
-Request Header
-Header name Connection Header Value keep-alive
-Request Header
-Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Request Header
-Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
-Request Header
-Header name Accept-Encoding Header Value gzip, deflate, sdch
-Request Header
-Header name Accept-Language Header Value en-US,en;q=0.8
-Body: Hello World!
-Finished parsing!
-[DEBUG] handle_request resp_buf:HTTP/1.1 404 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:58 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type
-Hello World!
-[DEBUUG] Sending :HTTP/1.1 404 
-Connection: keep-alive
-Date: Fri, 20 Jul 2018 13:09:58 GMT
-Server: Liso/1.0
-Content-Length: 0
-Content-Type
-Hello World!
-[ERROR] Error sending to client.
-[INFO]: Sending size 139
-[INFO]: Start select!
+Parsing:
+
