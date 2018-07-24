@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./lisod 9999 9990 log.txt xxx xxx xxx xxx xxx
+./lisod 9999 9990 log.txt lisod.lock ./www xxx CA/private/server.key CA/certs/server.crt

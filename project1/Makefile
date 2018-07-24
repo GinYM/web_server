@@ -18,7 +18,7 @@ all: ${TARGET}
 
 ${TARGET}: ${OBJFILES}
 	cd parser && ${MAKE} && cd ..
-	${CC} ${CFLAGS} -o ${TARGET} ${OBJFILES} ${DEPS} ${LDFLAGS}
+	${CC} ${CFLAGS} -o ${TARGET} ${OBJFILES} ${DEPS} ${LDFLAGS} -lssl
 
 
 clean:

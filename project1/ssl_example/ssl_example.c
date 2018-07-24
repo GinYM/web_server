@@ -15,7 +15,7 @@
 
 #include <openssl/ssl.h>
 
-#define ECHO_PORT 4949
+#define ECHO_PORT 9990
 #define BUF_SIZE 4096
 
 int close_socket(int sock)
