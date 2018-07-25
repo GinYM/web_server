@@ -500,6 +500,8 @@ int start_server()
 
                     int buflen = 0;
                     char *tmpbuf;
+                    readret = recv(i, buf, BUF_SIZE, 0);
+                    /*
                     while((readret = recv(i, buf, BUF_SIZE, 0)) > 0){
                         //buflen += readret;
                         if(buflen ==0){
@@ -512,13 +514,13 @@ int start_server()
 
                         memcpy(allbuf+buflen, buf, readret);
                         buflen += readret;
-                    }
+                    }*/
 
-                    if(readret >= 0 && buflen >0)
+                    if(readret > 0)
                     {
                         print_log("[INFO]: Start sending msg\n");
                         char * respond_buf;
-                        readret = handle_request(allbuf, buflen, i, &respond_buf);
+                        readret = handle_request(buf, readret, i, &respond_buf);
                         print_log("[INFO]: readret: %d\n", readret);
                         if (sendall_nossl(i, respond_buf, readret) != readret)
                         {
