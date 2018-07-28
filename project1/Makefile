@@ -7,7 +7,7 @@
 #                                                                              #
 ################################################################################
 
-DEPS = lisod.h util/util.* server/server.h server/server.c server/handle* parser/parse.h parser/y.tab.h parser/*.c
+DEPS = lisod.h util/util.* server/server.h server/server.c server/handle* parser/parse.h parser/y.tab.h parser/*.c CGI/cgi.*
 CC   = gcc
 CFLAGS = -Wall
 LDFLAGS = 

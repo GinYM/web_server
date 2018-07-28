@@ -8,3 +8,19 @@ HTTPS_port:9990
 HTTP_port:9999
 max_sd:5
 [INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock ssl 6
+[INFO]: Start select!
+[INFO]: After select!
+[DEBUG]: test2
+[INFO]: close connection!
+Error reading from client socket.
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock normal 6
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+

@@ -17,11 +17,11 @@
 
 
 //#define ECHO_PORT 9999
-#define BUF_SIZE 5000
-#define MAX_CLIENT_NUM 1024
+
 
 struct pool{
     char buf[BUF_SIZE];
 };
 
 int start_server();
+

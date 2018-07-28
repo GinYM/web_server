@@ -285,6 +285,10 @@ int start_server()
     /* finally, loop waiting for input and then write it back */
     //set of socket descriptors 
     fd_set working_set, master_set, ssl_set;  
+
+    //CGI set
+    fd_set cgi_write_set, cgi_read_set;
+
     int max_sd = master_sock > ssl_sock ? master_sock : ssl_sock;
     int max_fd, max_fd_ssl;
     max_fd = master_sock;
@@ -294,6 +298,8 @@ int start_server()
     FD_ZERO(&working_set);
     FD_ZERO(&master_set);
     FD_ZERO(&ssl_set);
+    FD_ZERO(&cgi_write_set);
+    FD_ZERO(&cgi_read_set);
     FD_SET(master_sock, &master_set);
     FD_SET(ssl_sock, &master_set);
 
@@ -321,6 +327,54 @@ int start_server()
         }
 
         for(int i = 0;i<=max_sd;i++){
+            if(FD_ISSET(i, &cgi_write_set)){
+                handle_cgi_write(pool, i, &cgi_read_set, &cgi_write_set);
+                
+            }
+            if(FD_ISSET(i, &cgi_read_set)){
+                handle_cgi_read(pool, i, &cgi_read_set,&cgi_write_set);
+                //ssl https
+                if(FD_ISSET(i, &ssl_set)){
+                    int sendret = sendall(all_ssl_context[i], pool[i].buf, pool[i].buflen);
+                    if (sendret != pool[i].buflen)
+                    {
+                        //close_socket(i);
+                        FD_CLR(i, &ssl_set);
+                        if(i == max_fd_ssl){
+                            while(FD_ISSET(max_fd_ssl, &ssl_set) == 0){
+                                max_fd_ssl--;
+                            }
+                        }
+                        max_sd = max_fd_ssl > max_fd ? max_fd_ssl : max_fd;
+                        print_log("[INFO] Sending bytes:%d to client.\n", sendret);
+                        SSL_shutdown(client_context);
+                        SSL_free(client_context);
+                        close_socket(i);
+                        //close_socket(master_sock);
+                        //SSL_CTX_free(ssl_context);
+                        //fprintf(stderr, "Error sending to client.\n");
+                        return EXIT_FAILURE;
+                    }
+                    //close_socket(i);
+                    //free(respond_buf);
+                    print_log("[INFO]: Sending size %ld\n", readret);
+                }else{
+                    // normal socket http
+                    if (sendall_nossl(i, pool[i].buf, pool[i].buflen) != pool[i].buflen)
+                    {
+                        close_socket(i);
+                        FD_CLR(i, &master_set);
+                        if(i == max_fd){
+                            while(FD_ISSET(max_fd, &master_set) == 0){
+                                max_fd--;
+                            }
+                        }
+                        max_sd = max_fd > max_fd_ssl ? max_fd : max_fd_ssl;
+                        print_log("[ERROR] Error sending to client.\n");
+                    }
+                }
+            }
+
             if(FD_ISSET(i, &working_set)){
                 //set_fl(i, O_NONBLOCK);
                 // creating new connection
@@ -408,23 +462,6 @@ int start_server()
                     memset(buf, 0, BUF_SIZE);
                     readret = SSL_read(client_context, buf, BUF_SIZE);
                     //SSL_write(client_context, buf, readret);
-                    /*while((readret = SSL_read(client_context, buf, BUF_SIZE)) > 0){
-                        //buflen += readret;
-                        if(buflen ==0){
-                            allbuf = malloc(sizeof(char)*(buflen+readret+1));
-                        }else{
-                            tmpbuf = malloc(sizeof(char)*(buflen+readret+1));
-                            memcpy(tmpbuf, allbuf, buflen);
-                            allbuf = tmpbuf;
-                        }
-
-                        memcpy(allbuf+buflen, buf, readret);
-                        buflen += readret;
-                        SSL_write(client_context, buf, readret);
-                        //sendall(client_context, buf, readret);
-                        print_log("[DEBUG]: test1\n");
-                        memset(buf, 0, BUF_SIZE);
-                    }*/
 
                     print_log("[DEBUG]: test2\n");
                     //SSL_write(client_context, allbuf, buflen);
@@ -435,9 +472,13 @@ int start_server()
                         print_log("[DEBUG]: test3\n");
                         print_log("[INFO]: Start sending msg\n");
                         char * respond_buf;
-                        readret = handle_request(buf, readret, i, &respond_buf);
-                        //print_log("respond:\n%s\n", respond_buf);
-                        //respond_buf[readret] = '\0';
+                        int isCGI = 0;
+                        readret = handle_request(buf, readret, i, &respond_buf, &isCGI, pool, i);
+                        // CGI
+                        if(isCGI == 1){
+                            FD_SET(i, &cgi_write_set);
+                            continue;
+                        }
                         print_log("sending :\n");
                         for(int ii = 0;ii<readret;ii++){
                             print_log("%c", respond_buf[ii]);
@@ -520,8 +561,13 @@ int start_server()
                     {
                         print_log("[INFO]: Start sending msg\n");
                         char * respond_buf;
-                        readret = handle_request(buf, readret, i, &respond_buf);
+                        int isCGI = 0;
+                        readret = handle_request(buf, readret, i, &respond_buf, &isCGI, pool, i);
                         print_log("[INFO]: readret: %d\n", readret);
+                        if(isCGI == 1){
+                            FD_SET(i, &cgi_write_set);
+                            continue;
+                        }
                         if (sendall_nossl(i, respond_buf, readret) != readret)
                         {
                             
@@ -562,6 +608,7 @@ int start_server()
                     
                 }
             }
+
         }
 
     }

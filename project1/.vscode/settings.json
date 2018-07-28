@@ -3,7 +3,8 @@
         "stdio.h": "c",
         "cstdarg": "c",
         "socket.h": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "type_traits": "c"
     },
     "python.pythonPath": "/usr/bin/python"
 }

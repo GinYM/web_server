@@ -246,11 +246,21 @@ int respond_error(char *buffer, int size, int socketFd, char **resp_buf){
 }
 
 
-int handle_request(char *buffer, int size, int socketFd, char **resp_buf){
+
+
+int handle_request(char *buffer, int size, int socketFd, char **resp_buf, int *isCGI, struct Pool * p, int fd){
   //Read from the file the sample
   Request *request = parse(buffer,size,socketFd);
   //Just printing everything
   int buf_size = 0;
+
+  char preFix[6];
+  memcpy(preFix, request->http_uri, 5);
+  if(strcmp(preFix, "/cgi/") == 0){
+      *isCGI = 1;
+      return 0;
+  }
+
   if(strcmp(request->http_method,"GET") == 0 || strcmp(request->http_method,"HEAD") == 0 || strcmp(request->http_method, "POST") == 0){
       buf_size = handle_get(request, resp_buf);
   }
@@ -264,8 +274,9 @@ int handle_request(char *buffer, int size, int socketFd, char **resp_buf){
   }
   print_log("Body: %s\n", request->body.data);
   print_log("Finished parsing!\n");
-  free(request->headers);
-  free(request);
-  print_log("[DEBUG] handle_request resp_buf:%s\n", *resp_buf);
+  p[fd].request = request;
+
+  
+
   return buf_size;
 }
