@@ -94,14 +94,13 @@ except OSError:
 def hello():
     return 'Hello, World!'
 
-from .db import init_app
-init_app(app)
+from . import db
+db.init_app(app)
 
-from .auth import bp
-app.register_blueprint(bp)
+from . import auth
+app.register_blueprint(auth.bp)
 
-
-from .blog import 
+from . import blog
 app.register_blueprint(blog.bp)
 app.add_url_rule('/', endpoint='index')
 
