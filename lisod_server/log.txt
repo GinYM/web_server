@@ -1,0 +1,582 @@
+[DEBUG]: private_key_file: CA/private/server.key
+[DEBUG]: certificate_file: CA/certs/server.crt
+----- Start Server -----
+[INFO]: Creating ssl socket 4
+HTTPS_port:9990
+----- Start Server -----
+[INFO]: Creating master socket 5
+HTTP_port:9999
+max_sd:5
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock normal 6
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+GET / HTTP/1.1
+Host: 127.0.0.1:9999
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+
+
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Sun, 05 Aug 2018 13:47:46 GMT
+[DEBUG] real content_length:802, resut:802
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:46 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
+
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
+
+</html>
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /
+header_count: 7
+Request Header
+Header name Host Header Value 127.0.0.1:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name Upgrade-Insecure-Requests Header Value 1
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Request Header
+Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, br
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Body: ˜‘ýÌ
+Finished parsing!
+[INFO]: readret: 990
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:46 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
+
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
+
+</html>
+
+[DEBUG]: in sendall_nossl send size:990
+[INFO]: Sending size 990
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+GET /images/liso_header.png HTTP/1.1
+Host: 127.0.0.1:9999
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1:9999/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+
+HK;q=0.8,en;q=0.7
+
+
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Sun, 05 Aug 2018 13:47:46 GMT
+[DEBUG] real content_length:17431, resut:17431
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:46 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
+‰PNG
+
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /images/liso_header.png
+header_count: 7
+Request Header
+Header name Host Header Value 127.0.0.1:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Request Header
+Header name Accept Header Value image/webp,image/apng,image/*,*/*;q=0.8
+Request Header
+Header name Referer Header Value http://127.0.0.1:9999/
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, br
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Body: ˜‘ýÌ
+Finished parsing!
+[INFO]: readret: 17621
+[ERROR] No more than BUF_SIZE:4096, current:17621[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:46 GMT
+Server: Liso/1.0
+Content-Length: 17431
+Content-Type: image/png
+Last-Modified: Fri, 23 Sep 2011 15:27:06 GMT
+
+‰PNG
+
+
+[DEBUG]: in sendall_nossl send size:17621
+[INFO]: Sending size 17621
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:9999
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1:9999/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+
+n;q=0.7
+
+HK;q=0.8,en;q=0.7
+
+
+status_line:HTTP/1.1 404 
+
+[DEBUG] Current date:Sun, 05 Aug 2018 13:47:47 GMT
+[DEBUG] handle_get: HTTP/1.1 404 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:47 GMT
+Server: Liso/1.0
+Content-Length: 0
+Content-Type
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /favicon.ico
+header_count: 7
+Request Header
+Header name Host Header Value 127.0.0.1:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Request Header
+Header name Accept Header Value image/webp,image/apng,image/*,*/*;q=0.8
+Request Header
+Header name Referer Header Value http://127.0.0.1:9999/
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, br
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Body: è‘ýÌ
+Finished parsing!
+[INFO]: readret: 127
+[DEBUUG] Sending :HTTP/1.1 404 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:47 GMT
+Server: Liso/1.0
+Content-Length: 0
+Content-Type
+
+[DEBUG]: in sendall_nossl send size:127
+[INFO]: Sending size 127
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock normal 7
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+GET / HTTP/1.1
+Host: 127.0.0.1:9999
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+If-Modified-Since: Wed, 28 Sep 2011 19:56:11 GMT
+
+
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Sun, 05 Aug 2018 13:47:50 GMT
+[DEBUG] real content_length:802, resut:802
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
+
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
+
+</html>
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /
+header_count: 9
+Request Header
+Header name Host Header Value 127.0.0.1:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name Cache-Control Header Value max-age=0
+Request Header
+Header name Upgrade-Insecure-Requests Header Value 1
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Request Header
+Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, br
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Request Header
+Header name If-Modified-Since Header Value Wed, 28 Sep 2011 19:56:11 GMT
+Body: è‘ýÌ
+Finished parsing!
+[INFO]: readret: 990
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:50 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
+
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
+
+</html>
+
+[DEBUG]: in sendall_nossl send size:990
+[INFO]: Sending size 990
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: close connection!
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:9999
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1:9999/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+
+
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+If-Modified-Since: Wed, 28 Sep 2011 19:56:11 GMT
+
+
+status_line:HTTP/1.1 404 
+
+[DEBUG] Current date:Sun, 05 Aug 2018 13:47:50 GMT
+[DEBUG] handle_get: HTTP/1.1 404 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:50 GMT
+Server: Liso/1.0
+Content-Length: 0
+Content-Type
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /favicon.ico
+header_count: 7
+Request Header
+Header name Host Header Value 127.0.0.1:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Request Header
+Header name Accept Header Value image/webp,image/apng,image/*,*/*;q=0.8
+Request Header
+Header name Referer Header Value http://127.0.0.1:9999/
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, br
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Body: ˜’ýÌ
+Finished parsing!
+[INFO]: readret: 127
+[DEBUUG] Sending :HTTP/1.1 404 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:50 GMT
+Server: Liso/1.0
+Content-Length: 0
+Content-Type
+
+[DEBUG]: in sendall_nossl send size:127
+[INFO]: Sending size 127
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: new sock normal 6
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+GET / HTTP/1.1
+Host: 127.0.0.1:9999
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+If-Modified-Since: Wed, 28 Sep 2011 19:56:11 GMT
+
+
+status_line:HTTP/1.1 200 
+
+[DEBUG] Current date:Sun, 05 Aug 2018 13:47:51 GMT
+[DEBUG] real content_length:802, resut:802
+[DEBUG] handle_get: HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:51 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
+
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
+
+</html>
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /
+header_count: 9
+Request Header
+Header name Host Header Value 127.0.0.1:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name Cache-Control Header Value max-age=0
+Request Header
+Header name Upgrade-Insecure-Requests Header Value 1
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Request Header
+Header name Accept Header Value text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, br
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Request Header
+Header name If-Modified-Since Header Value Wed, 28 Sep 2011 19:56:11 GMT
+Body: ø’ýÌ
+Finished parsing!
+[INFO]: readret: 990
+[DEBUUG] Sending :HTTP/1.1 200 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:51 GMT
+Server: Liso/1.0
+Content-Length: 802
+Content-Type: text/html
+Last-Modified: Wed, 28 Sep 2011 19:56:11 GMT
+
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Liso the Friendly Web Server</title>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+    </head>
+
+    <body>
+        <div id="page">
+            <img src="images/liso_header.png" alt="Liso the Friendly Web Server"></img>
+            <p>Welcome to the Liso 1.0 web server.  If you see this page then
+               congratulations!  Your Liso web server is up and running now!</p>
+            <p>This Liso web server was implemented by: xxxxxxx
+               &#60;<a href="mailto:xxxxx@andrew.cmu.edu">xxxxx@andrew.cmu.edu
+                    </a>&#62;</p>
+        </div>
+    </body>
+
+</html>
+
+[DEBUG]: in sendall_nossl send size:990
+[INFO]: Sending size 990
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: close connection!
+[INFO]: Start select!
+[INFO]: After select!
+[INFO]: In normal socket
+[INFO]: Start sending msg
+Parsing:
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:9999
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1:9999/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+
+
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+If-Modified-Since: Wed, 28 Sep 2011 19:56:11 GMT
+
+
+status_line:HTTP/1.1 404 
+
+[DEBUG] Current date:Sun, 05 Aug 2018 13:47:51 GMT
+[DEBUG] handle_get: HTTP/1.1 404 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:51 GMT
+Server: Liso/1.0
+Content-Length: 0
+Content-Type
+
+Http Method GET
+Http Version HTTP/1.1
+Http Uri /favicon.ico
+header_count: 7
+Request Header
+Header name Host Header Value 127.0.0.1:9999
+Request Header
+Header name Connection Header Value keep-alive
+Request Header
+Header name User-Agent Header Value Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Request Header
+Header name Accept Header Value image/webp,image/apng,image/*,*/*;q=0.8
+Request Header
+Header name Referer Header Value http://127.0.0.1:9999/
+Request Header
+Header name Accept-Encoding Header Value gzip, deflate, br
+Request Header
+Header name Accept-Language Header Value zh-CN,zh;q=0.9,zh-HK;q=0.8,en;q=0.7
+Body: Ø’ýÌ
+Finished parsing!
+[INFO]: readret: 127
+[DEBUUG] Sending :HTTP/1.1 404 
+Connection: keep-alive
+Date: Sun, 05 Aug 2018 13:47:51 GMT
+Server: Liso/1.0
+Content-Length: 0
+Content-Type
+
+[DEBUG]: in sendall_nossl send size:127
+[INFO]: Sending size 127
+[INFO]: Start select!
