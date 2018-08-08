@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "spiffy.h": "c"
+        "spiffy.h": "c",
+        "handle.h": "c",
+        "chunk.h": "c",
+        "types.h": "c"
     }
 }

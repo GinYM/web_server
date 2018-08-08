@@ -1,5 +1,11 @@
 #include "handle.h"
 
+void display_chunks(data_t *data){
+  for(int i = 0;i<data->chunks_num;i++){
+    DPRINTF(DEBUG_INIT, "dusplay_chunks:%s\n", data->chunks[i].hash);
+  }
+}
+
 void process_get(char *chunkfile, char *outputfile, void *data_void) {
   FILE *f;
   f = fopen(chunkfile,"r");
@@ -19,7 +25,7 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
 
   //FILE *f1;
   f = fopen(chunkfile,"r");
-  data->chunks = malloc(sizeof(struct Chunk)*data->chunks_num);
+  data->chunks = malloc(sizeof(struct Chunk)*(data->chunks_num+1));
   int count = 0;
   while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
     DPRINTF(DEBUG_INIT,"read line:%s", line);
@@ -30,9 +36,8 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
     
   }
   DPRINTF(DEBUG_INIT, "Before closing file\n");
-  //if(fclose(f)){
-  //    printf("Closing failed!\n");
-  //}
-  //fclose(f1);
   DPRINTF(DEBUG_INIT, "Close file\n");
+
+  //change state
+  data->state = READY_TO_WHOHAS;
 }

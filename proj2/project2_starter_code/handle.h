@@ -10,16 +10,26 @@
 
 struct Chunk{
     int id;
-    char hash[40];
+    char hash[50];
 };
 
 typedef struct Chunk chunk_t;
+
+enum State{
+    INITIAL,
+    READY_TO_WHOHAS,
+    READY_TO_RECV,
+    SEND_IHAVE
+};
 
 struct Data{
     chunk_t * chunks;
     char* dstFile;
     int chunks_num;
+    enum State state;
 };
+
+
 
 typedef struct Data data_t;
 
