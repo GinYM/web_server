@@ -6,6 +6,17 @@ void display_chunks(data_t *data){
   }
 }
 
+void initial_data(data_t *data){
+  data->state = INITIAL;
+  data->window_size = 8;
+  data->lastAck = 0;
+  data->lastAvailable = data->lastAck + data->window_size;
+  data->lastSent = 0;
+  data->maxAvailable = 512*1024/(1500-16) + 1;
+  data->lastAckCount = 0;
+  data->peer2Idx = NULL;
+}
+
 void process_get(char *chunkfile, char *outputfile, void *data_void) {
   FILE *f;
   f = fopen(chunkfile,"r");
@@ -26,6 +37,7 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
   //FILE *f1;
   f = fopen(chunkfile,"r");
   data->chunks = malloc(sizeof(struct Chunk)*(data->chunks_num+1));
+  
   int count = 0;
   while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
     DPRINTF(DEBUG_INIT,"read line:%s", line);
@@ -40,4 +52,7 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
 
   //change state
   data->state = READY_TO_WHOHAS;
+
+  //create target data array
+  data->targetData = malloc(sizeof(unsigned char)*data->chunks_num*512*1024);
 }

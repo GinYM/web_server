@@ -60,6 +60,13 @@ void showString(char *s, int length){
   DPRINTF(DEBUG_INIT, "\n");
 }
 
+void showBytes(unsigned char *s, int length){
+  for(int i = 0;i<length;i++){
+    DPRINTF(DEBUG_INIT, "%u", s[i]);
+  }
+  DPRINTF(DEBUG_INIT, "\n");
+}
+
 int isEqual(char *s1, char *s2, int length){
   //DPRINTF(DEBUG_INIT,"Compare:\n");
   showString(s1, length);
@@ -72,6 +79,68 @@ int isEqual(char *s1, char *s2, int length){
   return 1;
 }
 
+void sendData(int sock, bt_config_t *config, data_t *data, struct sockaddr_in * from, socklen_t fromlen){
+  FILE*f = fopen(config->chunk_file,"r");
+  char master_chunk[CHUNK_LINE_SIZE];
+  fgets(master_chunk, CHUNK_LINE_SIZE, f);
+  //chunk name, strip \n
+  master_chunk[strcspn(master_chunk, "\n")] = '\0';
+  //DPRINTF(DEBUG_INIT, "Open file:%s\n", master_chunk+6);
+  fclose(f);
+  f = fopen(master_chunk+6, "rb");
+  if(f == NULL){
+    fprintf("Error opening:%s\n", master_chunk+6);
+  }
+  int header_len = 16;
+  int sent_len = 0;
+  long filelen;
+  int packet_len = 1500;
+  int maxpacket_len = 1500;
+  int total_len = 512*1024;
+  unsigned char * sendmsg = malloc(sizeof(unsigned char)*packet_len);
+  int seq_num = 0;
+  fill_msg_header(sendmsg);
+  //type DATA
+  sendmsg[3] = 3;
+  while(data->lastSent <= data->lastAvailable){
+    sent_len = data->lastSent*(1500-16);
+    data->lastSent++;
+    seq_num = data->lastSent;
+    DPRINTF(DEBUG_INIT, "Send seq_num:%d\n", seq_num);
+    
+    //DPRINTF(DEBUG_INIT, "Sending seq_num:%d\n", seq_num);
+    fseek(f,(long)data->reqDataId*512*1024+sent_len,SEEK_SET);
+    //filelen = ftell(f);
+    //rewind(f);
+    if(data->lastSent != data->maxAvailable){
+      fread(sendmsg+16,maxpacket_len-16, 1, f);
+      packet_len = maxpacket_len;
+    }else{
+      sendmsg[6] = ((total_len-sent_len)>>8) & 0xFF;
+      sendmsg[7] = (total_len - sent_len) & 0xFF;
+      packet_len = total_len - sent_len + 16;
+      fread(sendmsg+16,total_len - sent_len, 1, f);
+      
+    }
+    assert(packet_len <= 1500);
+
+    //seq_num
+    sendmsg[8] = (seq_num >> 24) & 0xFF;
+    sendmsg[9] = (seq_num >> 16) & 0xFF;
+    sendmsg[10] = (seq_num >> 8) & 0xFF;
+    sendmsg[11] = seq_num & 0xFF;
+
+    //DPRINTF(DEBUG_INIT, "While Send: \n");
+
+    //showBytes(sendmsg+16, packet_len-16);
+
+    spiffy_sendto(sock, sendmsg, packet_len, 0, from, fromlen);
+
+    //debug
+    //break;
+    
+  }
+}
 
 void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
   #define BUFLEN 1500
@@ -85,7 +154,7 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
 
   binary2hex(buf,size,msg);
 
-  showString(msg, size);
+  //showString(msg, size);
 
   /*
   printf("PROCESS_INBOUND_UDP SKELETON -- replace!\nIncoming size:%d\n"
@@ -96,7 +165,11 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
    */
   int type = msg[7]-'0';
   int chunk_num = (msg[32]-'0')*16 + (msg[33]-'0');
-  DPRINTF(DEBUG_INIT, "type:%d, chunk_num:%d\n", type, chunk_num);
+  if(type <= 1)
+    DPRINTF(DEBUG_INIT, "type:%d, chunk_num:%d\n", type, chunk_num);
+  else{
+    DPRINTF(DEBUG_INIT, "Receive type:%d\n", type);
+  }
   int chunk_idx = 40;
 
   if(type == 0){
@@ -131,8 +204,10 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
       spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
     }
   }
-  //GET
+  //send GET
   if(type == 1){
+    //data->ihaveMsg = malloc(sizeof(char)*(size*2+1));
+    //memcpy(data->ihaveMsg, msg, size*2);
     int packet_len = 16+20;
     unsigned char * sendmsg = malloc(sizeof(unsigned char)*packet_len);
     fill_msg_header(sendmsg);
@@ -141,13 +216,12 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     sendmsg[7] = packet_len & 0xFF;
     //type 
     sendmsg[3] = 2;
-    for(int i = 0;i<chunk_num;i++){
-      for(int j = 0;j<20;j++){
-        sendmsg[16+j] = buf[20+i*20+j];
-      }
-      DPRINTF(DEBUG_INIT, "Sending: %s\n", sendmsg);
-      spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
-    }
+    data->getChunkNum = chunk_num;
+    memcpy(data->getChunk, buf+20, 20*chunk_num);
+    data->getChunkIdx = 0;
+    memcpy(sendmsg+16, data->getChunk+data->getChunkIdx*20, 20);
+    spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
+    
   }
 
   //Send Data, After GET
@@ -168,54 +242,28 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     }
     DPRINTF(DEBUG_INIT, "id:%d\n", id);
 
+    //here we initial reqDataId
+    data->reqDataId = id;
+
+    sendData(sock, config, data, &from, fromlen);
     
-    FILE*f = fopen(config->chunk_file,"rb");
-    int header_len = 16;
-    int sended_len = 0;
-    long filelen;
-    int packet_len = 1500;
-    int maxpacket_len = 1500;
-    int total_len = 512*1024;
-    unsigned char * sendmsg = malloc(sizeof(unsigned char)*packet_len);
-    int seq_num = 0;
-    fill_msg_header(sendmsg);
-    //type DATA
-    sendmsg[3] = 3;
-    while(sended_len < total_len){
-      seq_num++;
-      DPRINTF(DEBUG_INIT, "Sending seq_num:%d\n", seq_num);
-      fseek(f,(long)id*512*1024+sended_len,SEEK_SET);
-      //filelen = ftell(f);
-      //rewind(f);
-      if(512*1024 - sended_len > maxpacket_len-16){
-        fread(sendmsg+16,maxpacket_len-16, 1, f);
-        sended_len += maxpacket_len-16;
-        packet_len = maxpacket_len;
-      }else{
-        sendmsg[7] = ((total_len-sended_len)>>8) & 0xFF;
-        sendmsg[8] = (total_len - sended_len) & 0xFF;
-        packet_len = total_len - sended_len + 16;
-        fread(sendmsg+16,total_len - sended_len, 1, f);
-        sended_len = total_len;
-        
-      }
-      assert(packet_len <= 1500);
-      sendmsg[12] = (seq_num >> 24) & 0xFF;
-      sendmsg[13] = (seq_num >> 16) & 0xFF;
-      sendmsg[14] = (seq_num >> 8) & 0xFF;
-      sendmsg[15] = seq_num & 0xFF;
-
-      DPRINTF(DEBUG_INIT, "Send: \n");
-
-      spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
-
-      //debug
-      break;
-    }
   }
 
   if(type == 3){
+    int seq_num = 0;
+    for(int i = 16;i<16+8;i++){
+      seq_num += (msg[i]-'0')<<(4*(16+8-i-1));
+    }
+    //DPRINTF(DEBUG_INIT, "msg:%s\n", msg);
+    DPRINTF(DEBUG_INIT, "Get seq_num:%d, size:%d\n", seq_num, size);
 
+    //memcpy(data->targetData + , buf+16, size-16);
+  }
+
+  //recv data
+  if(type == 4){
+    //int ackNum  = (msg[24]-'0')<<
+    sendData(sock, config, data, &from, fromlen);
   }
 
 }
@@ -298,11 +346,29 @@ void fill_msg_whohas(unsigned char *msg, data_t *data){
 
 
 void process_send_whohas(int sock, bt_config_t *config, data_t *data){
+  DPRINTF(DEBUG_INIT, "Here in process_send_whohas\n");
   struct bt_peer_s * peer = config->peers;
   int tolen = sizeof(struct sockaddr_in);
   unsigned char *msg = malloc(sizeof(char)*(20+data->chunks_num*20));
   fill_msg_whohas(msg, data);
+  int idx = 0;
+  char address[50];
   while(peer != NULL){
+    peerDataIdx_t *p2Idx = malloc(sizeof(peerDataIdx_t));
+    //char address[50];
+    p2Idx->id = 0;
+    
+    memcpy(p2Idx->address, inet_ntoa(peer->addr.sin_addr), strlen(inet_ntoa(peer->addr.sin_addr)));
+    //memcpy(address+strlen(inet_ntoa(peer->addr.sin_addr)), ntohs(peer->addr.sin_port), strlen(ntohs(peer->addr.sin_port)));
+    p2Idx->port = ntohs(peer->addr.sin_port);
+    //DPRINTF(DEBUG_INIT, "Addr:%s\n", address);
+    p2Idx->next = data->peer2Idx;
+    data->peer2Idx = p2Idx;
+    
+
+    DPRINTF(DEBUG_INIT, "Addr:%s, port:%d\n", data->peer2Idx->address, data->peer2Idx->port);
+
+    
     spiffy_sendto(sock, msg, (20+data->chunks_num*20), 0, &peer->addr, tolen);
     peer = peer->next;
   }
@@ -352,8 +418,12 @@ void peer_run(bt_config_t *config) {
   }
   
   spiffy_init(config->identity, (struct sockaddr *)&myaddr, sizeof(myaddr));
+
+  //initial data
   struct Data data;
-  data.state = INITIAL;
+  initial_data(&data);
+  
+
   while (1) {
     int nfds;
     FD_SET(STDIN_FILENO, &readfds);
