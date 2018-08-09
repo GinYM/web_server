@@ -61,7 +61,7 @@ void showString(char *s, int length){
 }
 
 int isEqual(char *s1, char *s2, int length){
-  DPRINTF(DEBUG_INIT,"Compare:\n");
+  //DPRINTF(DEBUG_INIT,"Compare:\n");
   showString(s1, length);
   showString(s2, length);
   for(int i = 0;i<length;i++){
@@ -73,23 +73,27 @@ int isEqual(char *s1, char *s2, int length){
 }
 
 
-void process_inbound_udp(int sock, bt_config_t *config) {
+void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
   #define BUFLEN 1500
   struct sockaddr_in from;
   socklen_t fromlen;
   unsigned char buf[BUFLEN];
-  char msg[BUFLEN];
+  char msg[BUFLEN*2+1];
 
   fromlen = sizeof(from);
   int size = spiffy_recvfrom(sock, buf, BUFLEN, 0, (struct sockaddr *) &from, &fromlen);
 
   binary2hex(buf,size,msg);
 
+  showString(msg, size);
+
+  /*
   printf("PROCESS_INBOUND_UDP SKELETON -- replace!\nIncoming size:%d\n"
 	 "Incoming message from %s:%d\n%s\n\n", size,
 	 inet_ntoa(from.sin_addr),
 	 ntohs(from.sin_port),
 	 msg);
+   */
   int type = msg[7]-'0';
   int chunk_num = (msg[32]-'0')*16 + (msg[33]-'0');
   DPRINTF(DEBUG_INIT, "type:%d, chunk_num:%d\n", type, chunk_num);
@@ -144,7 +148,74 @@ void process_inbound_udp(int sock, bt_config_t *config) {
       DPRINTF(DEBUG_INIT, "Sending: %s\n", sendmsg);
       spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
     }
+  }
+
+  //Send Data, After GET
+  if(type == 2){
+    char hash[50] ;
+    memcpy(hash, msg+32,40);
+    DPRINTF(DEBUG_INIT, "GET %s\n", hash);
+    int id=-1;
+    for(int i = 0;i<data->chunks_num;i++){
+      if(isEqual(hash, data->chunks[i].hash,40)){
+        id = data->chunks[i].id;
+        break;
+      }
+    }
+    if(id == -1){
+      printf("Error, No such file!\n");
+      return;
+    }
+    DPRINTF(DEBUG_INIT, "id:%d\n", id);
+
     
+    FILE*f = fopen(config->chunk_file,"rb");
+    int header_len = 16;
+    int sended_len = 0;
+    long filelen;
+    int packet_len = 1500;
+    int maxpacket_len = 1500;
+    int total_len = 512*1024;
+    unsigned char * sendmsg = malloc(sizeof(unsigned char)*packet_len);
+    int seq_num = 0;
+    fill_msg_header(sendmsg);
+    //type DATA
+    sendmsg[3] = 3;
+    while(sended_len < total_len){
+      seq_num++;
+      DPRINTF(DEBUG_INIT, "Sending seq_num:%d\n", seq_num);
+      fseek(f,(long)id*512*1024+sended_len,SEEK_SET);
+      //filelen = ftell(f);
+      //rewind(f);
+      if(512*1024 - sended_len > maxpacket_len-16){
+        fread(sendmsg+16,maxpacket_len-16, 1, f);
+        sended_len += maxpacket_len-16;
+        packet_len = maxpacket_len;
+      }else{
+        sendmsg[7] = ((total_len-sended_len)>>8) & 0xFF;
+        sendmsg[8] = (total_len - sended_len) & 0xFF;
+        packet_len = total_len - sended_len + 16;
+        fread(sendmsg+16,total_len - sended_len, 1, f);
+        sended_len = total_len;
+        
+      }
+      assert(packet_len <= 1500);
+      sendmsg[12] = (seq_num >> 24) & 0xFF;
+      sendmsg[13] = (seq_num >> 16) & 0xFF;
+      sendmsg[14] = (seq_num >> 8) & 0xFF;
+      sendmsg[15] = seq_num & 0xFF;
+
+      DPRINTF(DEBUG_INIT, "Send: \n");
+
+      spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
+
+      //debug
+      break;
+    }
+  }
+
+  if(type == 3){
+
   }
 
 }
@@ -187,7 +258,9 @@ void fill_msg_header(unsigned char *msg){
   msg[7] = packet_len & 0xFF;
 
   //invalid from 8 to 15
-
+  for(int i = 8;i<=15;i++){
+    msg[i] = 0;
+  }
 }
 
 // append the hash_idx(th) hash to msg
@@ -290,7 +363,7 @@ void peer_run(bt_config_t *config) {
     
     if (nfds > 0) {
       if (FD_ISSET(sock, &readfds)) {
-	      process_inbound_udp(sock, config);
+	      process_inbound_udp(sock, config, &data);
       }
       
       if (FD_ISSET(STDIN_FILENO, &readfds)) {
