@@ -257,13 +257,53 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     //DPRINTF(DEBUG_INIT, "msg:%s\n", msg);
     DPRINTF(DEBUG_INIT, "Get seq_num:%d, size:%d\n", seq_num, size);
 
+    //store data update recved seq_num
+    memcpy(data->targetData+data->getChunkIdx*(512*1024)+(seq_num-1)*(1500-16),buf+16, size-16);
+    data->recvedpPkg[seq_num] = 1;
+    //send ACK
+    int packet_len = 16;
+    unsigned char * sendmsg = malloc(sizeof(unsigned char)*packet_len);
+    fill_msg_header(sendmsg);
+    sendmsg[6] = (packet_len>>8) & 0xFF;
+    sendmsg[7] = packet_len & 0xFF;
+    
+    //type
+    sendmsg[3] = 4;
+    
+    
+    
     //memcpy(data->targetData + , buf+16, size-16);
+    if(data->lastAckSent >= seq_num-1 ){
+      DPRINTF(DEBUG_INIT, "Sending:%d\n", seq_num);
+      sendmsg[12] = (seq_num >> 24) & 0xFF;
+      sendmsg[13] = (seq_num >> 16) & 0xFF;
+      sendmsg[14] = (seq_num >> 8) & 0xFF;
+      sendmsg[15] = seq_num & 0xFF;
+      
+      while(data->lastAckSent < data->maxAvailable && data->recvedpPkg[data->lastAckSent+1] == 1){
+        data->lastAckSent++;
+      }
+    }else{
+      sendmsg[12] = (data->lastAckSent >> 24) & 0xFF;
+      sendmsg[13] = (data->lastAckSent >> 16) & 0xFF;
+      sendmsg[14] = (data->lastAckSent >> 8) & 0xFF;
+      sendmsg[15] = data->lastAckSent & 0xFF;
+    }
+
+    spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
   }
 
   //recv data
   if(type == 4){
     //int ackNum  = (msg[24]-'0')<<
-    sendData(sock, config, data, &from, fromlen);
+    int ack_num = 0;
+    for(int i = 24;i<24+8;i++){
+      ack_num += (msg[i]-'0')<<(4*(24+8-i-1));
+    }
+    DPRINTF(DEBUG_INIT, "Recv ACK:%d\n", ack_num);
+    data->lastAck = ack_num;
+    data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
+    //sendData(sock, config, data, &from, fromlen);
   }
 
 }

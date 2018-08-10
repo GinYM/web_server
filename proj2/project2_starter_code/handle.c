@@ -15,6 +15,16 @@ void initial_data(data_t *data){
   data->maxAvailable = 512*1024/(1500-16) + 1;
   data->lastAckCount = 0;
   data->peer2Idx = NULL;
+  data->lastAckSent = 0;
+
+
+  data->getChunk = malloc(sizeof(unsigned char)*(1500));
+
+  data->recvedpPkg = malloc(sizeof(int)*(data->maxAvailable+1));
+  memset(data->recvedpPkg, 0, sizeof(int)*(data->maxAvailable+1));
+
+  //data->recvedAck = malloc(sizeof(int)*(data->maxAvailable+1));
+  //memset(data->recvedAck, 0, sizeof(int)*(data->maxAvailable+1));
 }
 
 void process_get(char *chunkfile, char *outputfile, void *data_void) {

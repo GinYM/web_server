@@ -50,9 +50,13 @@ struct Data{
 
     int reqDataId;
     peerDataIdx_t * peer2Idx;
-    char*getChunk; // chunk that needed to fetch
+    unsigned char*getChunk; // chunk that needed to fetch
     int getChunkIdx; // current Fetch Chunk
     int getChunkNum; // total number of chunk to get from one peer
+
+    int lastAckSent;
+    int *recvedpPkg;
+    
 };
 
 
