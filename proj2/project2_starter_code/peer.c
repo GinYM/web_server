@@ -300,7 +300,13 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     for(int i = 24;i<24+8;i++){
       ack_num += (msg[i]-'0')<<(4*(24+8-i-1));
     }
-    DPRINTF(DEBUG_INIT, "Recv ACK:%d\n", ack_num);
+    
+    if(ack_num != data->lastAck){
+      data->lastAckCount = 1;
+    }else{
+      data->lastAckCount++;
+    }
+    DPRINTF(DEBUG_INIT, "Recv ACK:%d LastACK Count:%d\n", ack_num, data->lastAckCount);
     data->lastAck = ack_num;
     data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
     //sendData(sock, config, data, &from, fromlen);
