@@ -65,3 +65,4 @@ typedef struct Data data_t;
 
 void process_get(char *chunkfile, char *outputfile, void *data);
 void initial_data(data_t *data);
+void reset_empty(data_t * data);

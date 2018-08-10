@@ -102,7 +102,7 @@ void sendData(int sock, bt_config_t *config, data_t *data, struct sockaddr_in * 
   fill_msg_header(sendmsg);
   //type DATA
   sendmsg[3] = 3;
-  while(data->lastSent <= data->lastAvailable){
+  while(data->lastSent < data->lastAvailable){
     sent_len = data->lastSent*(1500-16);
     data->lastSent++;
     seq_num = data->lastSent;
@@ -140,6 +140,7 @@ void sendData(int sock, bt_config_t *config, data_t *data, struct sockaddr_in * 
     //break;
     
   }
+  fclose(f);
 }
 
 void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
@@ -168,11 +169,12 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
   if(type <= 1)
     DPRINTF(DEBUG_INIT, "type:%d, chunk_num:%d\n", type, chunk_num);
   else{
-    DPRINTF(DEBUG_INIT, "Receive type:%d\n", type);
+    //DPRINTF(DEBUG_INIT, "Receive type:%d\n", type);
   }
   int chunk_idx = 40;
 
   if(type == 0){
+    reset_empty(data);
     // whohas
     FILE*f = fopen(config->has_chunk_file, "r");
     char line[CHUNK_LINE_SIZE];
@@ -206,6 +208,7 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
   }
   //send GET
   if(type == 1){
+    reset_empty(data);
     //data->ihaveMsg = malloc(sizeof(char)*(size*2+1));
     //memcpy(data->ihaveMsg, msg, size*2);
     int packet_len = 16+20;
@@ -226,6 +229,7 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
 
   //Send Data, After GET
   if(type == 2){
+    reset_empty(data);
     char hash[50] ;
     memcpy(hash, msg+32,40);
     DPRINTF(DEBUG_INIT, "GET %s\n", hash);
@@ -249,10 +253,17 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     
   }
 
+  //DATA
   if(type == 3){
     int seq_num = 0;
     for(int i = 16;i<16+8;i++){
-      seq_num += (msg[i]-'0')<<(4*(16+8-i-1));
+      //DPRINTF(DEBUG_INIT,"Seq Num:%c\n", msg[i]);
+      if(msg[i] >= '0' && msg[i] <= '9'){
+        seq_num += (msg[i]-'0')<<(4*(16+8-i-1));
+      }else{
+        seq_num += ( (int)(msg[i]-'a') + 10)<<(4*(16+8-i-1));
+      }
+      
     }
     //DPRINTF(DEBUG_INIT, "msg:%s\n", msg);
     DPRINTF(DEBUG_INIT, "Get seq_num:%d, size:%d\n", seq_num, size);
@@ -290,7 +301,37 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
       sendmsg[15] = data->lastAckSent & 0xFF;
     }
 
+    //send ACK
     spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
+
+    DPRINTF(DEBUG_INIT, "Receiver: lastAckSent:%d\n", data->lastAckSent);
+
+    //check whether is Finished
+    if(data->lastAckSent == data->maxAvailable){
+      //Finished
+      DPRINTF(DEBUG_INIT, "Finished for chunk:%d\n", data->getChunkIdx);
+      if(data->getChunkIdx >= data->getChunkNum-1){
+        DPRINTF(DEBUG_INIT, "Finished All\n");
+      }else{
+        //Request New chunk
+        int packet_len = 16+20;
+        unsigned char * sendmsg = malloc(sizeof(unsigned char)*packet_len);
+        fill_msg_header(sendmsg);
+        //PACKET len
+        sendmsg[6] = (packet_len>>8) & 0xFF;
+        sendmsg[7] = packet_len & 0xFF;
+        //type 
+        sendmsg[3] = 2;
+        //data->getChunkNum = chunk_num;
+        //memcpy(data->getChunk, buf+20, 20*chunk_num);
+        data->getChunkIdx++;
+        memcpy(sendmsg+16, data->getChunk+data->getChunkIdx*20, 20);
+        spiffy_sendto(sock, sendmsg, packet_len, 0, &from, fromlen);
+        reset_empty(data);
+        //reset to zero
+      }
+    }
+
   }
 
   //recv data
@@ -298,7 +339,17 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     //int ackNum  = (msg[24]-'0')<<
     int ack_num = 0;
     for(int i = 24;i<24+8;i++){
-      ack_num += (msg[i]-'0')<<(4*(24+8-i-1));
+      if(msg[i] >= '0' && msg[i] <= '9'){
+        ack_num += (msg[i]-'0')<<(4*(24+8-i-1));
+      }else{
+        ack_num += (msg[i]-'a'+10)<<(4*(24+8-i-1));
+      }
+      
+    }
+
+    if(ack_num > data->lastAvailable || ack_num > data->lastSent){
+      DPRINTF(DEBUG_INIT, "Old Msg\n");
+      return;
     }
     
     if(ack_num != data->lastAck){
@@ -306,10 +357,21 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     }else{
       data->lastAckCount++;
     }
-    DPRINTF(DEBUG_INIT, "Recv ACK:%d LastACK Count:%d\n", ack_num, data->lastAckCount);
-    data->lastAck = ack_num;
+    //DPRINTF(DEBUG_INIT, "Recv ACK:%d LastACK Count:%d\n", ack_num, data->lastAckCount);
+    data->lastAck = ack_num > data->lastAck ? ack_num : data->lastAck;
     data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
-    //sendData(sock, config, data, &from, fromlen);
+    
+    
+
+    if(data->lastAckCount >= 3){
+      data->lastSent = data->lastAck;
+      printf("Error!\n");
+      exit(-1);
+    }
+
+    DPRINTF(DEBUG_INIT, "ReqDataId:%d lastAck:%d ack_num:%d LastACK Count:%d lastAvailable:%d maxAvailable:%d lastSent:%d\n", data->reqDataId, data->lastAck, ack_num,  data->lastAckCount, data->lastAvailable, data->maxAvailable, data->lastSent);
+
+    sendData(sock, config, data, &from, fromlen);
   }
 
 }
