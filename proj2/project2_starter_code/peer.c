@@ -312,6 +312,7 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
       DPRINTF(DEBUG_INIT, "Finished for chunk:%d\n", data->getChunkIdx);
       if(data->getChunkIdx >= data->getChunkNum-1){
         DPRINTF(DEBUG_INIT, "Finished All\n");
+        write_to_newfile(data);
       }else{
         //Request New chunk
         int packet_len = 16+20;

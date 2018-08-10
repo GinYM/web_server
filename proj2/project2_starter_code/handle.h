@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <assert.h>
 #include "debug.h"
+#include<string.h>
 
 #define CHUNK_LINE_SIZE 500
 
@@ -56,6 +57,7 @@ struct Data{
 
     int lastAckSent;
     int *recvedpPkg;
+    char *output_file;
     
 };
 
@@ -66,3 +68,4 @@ typedef struct Data data_t;
 void process_get(char *chunkfile, char *outputfile, void *data);
 void initial_data(data_t *data);
 void reset_empty(data_t * data);
+void write_to_newfile(data_t * data);

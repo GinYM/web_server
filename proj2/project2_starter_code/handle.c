@@ -42,6 +42,11 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
   f = fopen(chunkfile,"r");
   char line[CHUNK_LINE_SIZE];
   data_t * data = (data_t*)data_void;
+
+  //save outputfile
+  data->output_file = malloc(sizeof(char)*strlen(outputfile));
+  memcpy(data->output_file, outputfile, strlen(outputfile));
+
   data->chunks_num = 0;
   while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
     
@@ -75,4 +80,9 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
 
   //create target data array
   data->targetData = malloc(sizeof(unsigned char)*data->chunks_num*512*1024);
+}
+
+void write_to_newfile(data_t * data){
+  FILE *f = fopen(data->output_file, "wb");
+  fwrite(data->targetData, data->getChunkNum*512*1024, 1, f);
 }
