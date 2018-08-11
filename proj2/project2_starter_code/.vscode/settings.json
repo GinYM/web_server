@@ -3,6 +3,7 @@
         "spiffy.h": "c",
         "handle.h": "c",
         "chunk.h": "c",
-        "types.h": "c"
+        "types.h": "c",
+        "inet.h": "c"
     }
 }

@@ -18,17 +18,17 @@ void reset_empty(data_t * data){
 void initial_data(data_t *data, char *has_chunk_file){
 
   FILE *f = fopen(has_chunk_file, "r");
-  char line[CHUNK_LINE_SIZE];
+  char line[CHUNK_LINE_SIZE+10];
   data->has_chunks_num = 0;
   while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
     if (line[0] == '#') continue;
     data->has_chunks_num++;
   }
-  fclose(f);
+  //fclose(f);
   data->has_chunks = malloc(sizeof(struct Chunk)*(data->chunks_num+1));
 
-  f = fopen(has_chunk_file,"r");
-  
+  //f = fopen(has_chunk_file,"r");
+  rewind(f);
   
   int count = 0;
   while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
@@ -58,6 +58,8 @@ void initial_data(data_t *data, char *has_chunk_file){
   data->recvedpPkg = malloc(sizeof(int)*(data->maxAvailable+1));
   memset(data->recvedpPkg, 0, sizeof(int)*(data->maxAvailable+1));
 
+  fclose(f);
+
   //data->recvedAck = malloc(sizeof(int)*(data->maxAvailable+1));
   //memset(data->recvedAck, 0, sizeof(int)*(data->maxAvailable+1));
 }
@@ -79,14 +81,13 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
     data->chunks_num++;
   }
 
-  if(fclose(f)){
-      printf("Closing failed!\n");
-  }
-  
+  //rewind(f);
+  //fclose(f);
 
   //FILE *f1;
   f = fopen(chunkfile,"r");
   data->chunks = malloc(sizeof(struct Chunk)*(data->chunks_num+1));
+  
   
   int count = 0;
   while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
@@ -95,7 +96,6 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
     assert(sscanf(line, "%d %s", &data->chunks[count].id, data->chunks[count].hash) != 0);
     DPRINTF(DEBUG_INIT, "id:%d hash:%s\n", data->chunks[count].id, data->chunks[count].hash);
     count++;
-    
   }
   DPRINTF(DEBUG_INIT, "Before closing file\n");
   DPRINTF(DEBUG_INIT, "Close file\n");
@@ -104,10 +104,20 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
   data->state = READY_TO_WHOHAS;
 
   //create target data array
-  data->targetData = malloc(sizeof(unsigned char)*data->chunks_num*512*1024);
+  DPRINTF(DEBUG_INIT, "chunks_num:%d\n", data->chunks_num);
+  
+
+  if(data->targetData == NULL){
+    DPRINTF(DEBUG_INIT, "Error malloc!\n");
+  }
+
+  data->targetData = malloc((data->chunks_num)*512*1024);
+
+  //fclose(f);
 }
 
 void write_to_newfile(data_t * data){
   FILE *f = fopen(data->output_file, "wb");
   fwrite(data->targetData, data->getChunkNum*512*1024, 1, f);
+  fclose(f);
 }

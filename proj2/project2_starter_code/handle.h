@@ -7,6 +7,10 @@
 #include "debug.h"
 #include<string.h>
 
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+
 #define CHUNK_LINE_SIZE 500
 
 struct Chunk{
@@ -32,8 +36,15 @@ enum State{
     READY_TO_RECV,
     SEND_IHAVE,
     GET_NEXT_CHUNK,
-    FINISHED_GET
+    FINISHED_GET,
+    SENDING_MSG,
+    FINISHED_SENDING
 };
+
+//this part is only for retransmit after time out
+int prev_sock;
+struct sockaddr_in *prev_from;
+socklen_t prev_fromlen;
 
 struct Data{
     chunk_t * chunks;
@@ -60,6 +71,7 @@ struct Data{
     int lastAckSent;
     int *recvedpPkg;
     char *output_file;
+
     
 };
 

@@ -23,6 +23,7 @@
 #include "handle.h"
 #include "chunk.h"
 #include <assert.h>
+#include <sys/time.h>
 
 void peer_run(bt_config_t *config);
 
@@ -80,6 +81,7 @@ int isEqual(char *s1, char *s2, int length){
 }
 
 void sendData(int sock, bt_config_t *config, data_t *data, struct sockaddr_in * from, socklen_t fromlen){
+  data->state = SENDING_MSG;
   FILE*f = fopen(config->chunk_file,"r");
   char master_chunk[CHUNK_LINE_SIZE];
   fgets(master_chunk, CHUNK_LINE_SIZE, f);
@@ -143,6 +145,12 @@ void sendData(int sock, bt_config_t *config, data_t *data, struct sockaddr_in * 
   fclose(f);
 }
 
+void retransmit(data_t * data, bt_config_t *config){
+  
+
+  sendData(prev_sock, config, data, prev_from, prev_fromlen);
+}
+
 void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
   #define BUFLEN 1500
   struct sockaddr_in from;
@@ -152,6 +160,10 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
 
   fromlen = sizeof(from);
   int size = spiffy_recvfrom(sock, buf, BUFLEN, 0, (struct sockaddr *) &from, &fromlen);
+
+  prev_sock = sock;
+  prev_from = &from;
+  prev_fromlen = fromlen;
 
   binary2hex(buf,size,msg);
 
@@ -314,6 +326,7 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
       if(data->getChunkIdx >= data->getChunkNum-1){
         DPRINTF(DEBUG_INIT, "Finished All\n");
         write_to_newfile(data);
+        data->state = FINISHED_SENDING;
       }else{
         //Request New chunk
         int packet_len = 16+20;
@@ -531,15 +544,21 @@ void peer_run(bt_config_t *config) {
 
   //initial data
   struct Data data;
+  DPRINTF(DEBUG_INIT ,"Has chunk file:%s\n", config->has_chunk_file);
   initial_data(&data, config->has_chunk_file);
   
+  struct timeval timeout={1,0};
 
   while (1) {
     int nfds;
     FD_SET(STDIN_FILENO, &readfds);
     FD_SET(sock, &readfds);
     
-    nfds = select(sock+1, &readfds, NULL, NULL, NULL);
+    if(data.state == SENDING_MSG)
+      nfds = select(sock+1, &readfds, NULL, NULL, NULL);
+    else{
+      nfds = select(sock+1, &readfds, NULL, NULL, &timeout);
+    }
     
     if (nfds > 0) {
       if (FD_ISSET(sock, &readfds)) {
@@ -549,8 +568,12 @@ void peer_run(bt_config_t *config) {
       if (FD_ISSET(STDIN_FILENO, &readfds)) {
 	        process_user_input(STDIN_FILENO, userbuf, handle_user_input,
 			   "Currently unused", &data);
+          
           process_send_whohas(sock, config, &data);
       }
+    }else if(nfds == 0 && data.state == SENDING_MSG){
+      //retransmit 
+
     }
   }
 }
