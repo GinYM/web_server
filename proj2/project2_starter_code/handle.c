@@ -15,7 +15,32 @@ void reset_empty(data_t * data){
   memset(data->recvedpPkg, 0, sizeof(int)*(data->maxAvailable+1));
 }
 
-void initial_data(data_t *data){
+void initial_data(data_t *data, char *has_chunk_file){
+
+  FILE *f = fopen(has_chunk_file, "r");
+  char line[CHUNK_LINE_SIZE];
+  data->has_chunks_num = 0;
+  while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
+    if (line[0] == '#') continue;
+    data->has_chunks_num++;
+  }
+  fclose(f);
+  data->has_chunks = malloc(sizeof(struct Chunk)*(data->chunks_num+1));
+
+  f = fopen(has_chunk_file,"r");
+  
+  
+  int count = 0;
+  while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
+    DPRINTF(DEBUG_INIT,"read line:%s", line);
+    if (line[0] == '#') continue;
+    assert(sscanf(line, "%d %s", &data->has_chunks[count].id, data->has_chunks[count].hash) != 0);
+    DPRINTF(DEBUG_INIT, "id:%d hash:%s\n", data->has_chunks[count].id, data->has_chunks[count].hash);
+    count++;
+    
+  }
+
+
   data->state = INITIAL;
   data->window_size = 8;
   data->lastAck = 0;

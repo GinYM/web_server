@@ -68,7 +68,7 @@ void showBytes(unsigned char *s, int length){
 }
 
 int isEqual(char *s1, char *s2, int length){
-  //DPRINTF(DEBUG_INIT,"Compare:\n");
+  DPRINTF(DEBUG_INIT,"Compare:\n");
   showString(s1, length);
   showString(s2, length);
   for(int i = 0;i<length;i++){
@@ -232,11 +232,12 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     reset_empty(data);
     char hash[50] ;
     memcpy(hash, msg+32,40);
+    hash[40] = '\0';
     DPRINTF(DEBUG_INIT, "GET %s\n", hash);
     int id=-1;
     for(int i = 0;i<data->chunks_num;i++){
-      if(isEqual(hash, data->chunks[i].hash,40)){
-        id = data->chunks[i].id;
+      if(isEqual(hash, data->has_chunks[i].hash,40)){
+        id = data->has_chunks[i].id;
         break;
       }
     }
@@ -447,7 +448,7 @@ void fill_msg_whohas(unsigned char *msg, data_t *data){
 
   //chunk hash
   for(int i = 0;i<data->chunks_num;i++){
-    DPRINTF(DEBUG_INIT, "data->chunks hash:%s\n", data->chunks[i].hash);
+    DPRINTF(DEBUG_INIT, "whohas data->has_chunks hash:%s\n", data->chunks[i].hash);
     ascii2hex(data->chunks[i].hash,40,msg+20+i*20);
   }
 
@@ -530,7 +531,7 @@ void peer_run(bt_config_t *config) {
 
   //initial data
   struct Data data;
-  initial_data(&data);
+  initial_data(&data, config->has_chunk_file);
   
 
   while (1) {

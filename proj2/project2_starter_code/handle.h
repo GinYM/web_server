@@ -37,8 +37,10 @@ enum State{
 
 struct Data{
     chunk_t * chunks;
+    chunk_t * has_chunks;
     char* dstFile;
     int chunks_num;
+    int has_chunks_num;
     enum State state;
     unsigned char * targetData;
     int window_size;
@@ -66,6 +68,6 @@ struct Data{
 typedef struct Data data_t;
 
 void process_get(char *chunkfile, char *outputfile, void *data);
-void initial_data(data_t *data);
+void initial_data(data_t *data, char* has_chunk_file);
 void reset_empty(data_t * data);
 void write_to_newfile(data_t * data);
