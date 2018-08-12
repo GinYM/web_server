@@ -24,11 +24,12 @@ void initial_data(data_t *data, char *has_chunk_file){
     if (line[0] == '#') continue;
     data->has_chunks_num++;
   }
-  //fclose(f);
-  data->has_chunks = malloc(sizeof(struct Chunk)*(data->chunks_num+1));
+  fclose(f);
+  data->has_chunks = malloc(sizeof(struct Chunk)*(data->has_chunks_num+1));
 
-  //f = fopen(has_chunk_file,"r");
-  rewind(f);
+  f = fopen(has_chunk_file,"r");
+  //rewind(f);
+  DPRINTF(DEBUG_INIT, "chunks_num:%d\n", data->has_chunks_num);
   
   int count = 0;
   while (fgets(line, CHUNK_LINE_SIZE, f) != NULL) {
@@ -42,7 +43,7 @@ void initial_data(data_t *data, char *has_chunk_file){
 
 
   data->state = INITIAL;
-  data->window_size = 8;
+  data->window_size = 1;  //initial is set to 1
   data->lastAck = 0;
   data->lastAvailable = data->lastAck + data->window_size;
   data->lastSent = 0;
@@ -51,6 +52,9 @@ void initial_data(data_t *data, char *has_chunk_file){
   data->peer2Idx = NULL;
   data->lastAckSent = 0;
   data->getChunkIdx = 0;
+
+  data->ssthresh = 64;
+  data->ccstate = SLOW_START;
 
 
   data->getChunk = malloc(sizeof(unsigned char)*(1500));
@@ -120,4 +124,24 @@ void write_to_newfile(data_t * data){
   FILE *f = fopen(data->output_file, "wb");
   fwrite(data->targetData, data->getChunkNum*512*1024, 1, f);
   fclose(f);
+}
+
+//increase window size by one
+void increase_wsz(data_t *data){
+  if(data->state == SLOW_START){
+    data->window_size++;
+    data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
+    if(data->window_size == data->ssthresh){
+      data->state = CONGESTION_AVOIDANCE;
+      data->nextAck = data->lastAck + data->window_size;
+      
+    }
+  }else{
+    if(data->lastAck == data->nextAck){
+      data->window_size++;
+      data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
+      data->nextAck = data->lastAck + data->window_size;
+    }
+  }
+  
 }

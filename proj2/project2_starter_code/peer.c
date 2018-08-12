@@ -247,7 +247,7 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
     hash[40] = '\0';
     DPRINTF(DEBUG_INIT, "GET %s\n", hash);
     int id=-1;
-    for(int i = 0;i<data->chunks_num;i++){
+    for(int i = 0;i<data->has_chunks_num;i++){
       if(isEqual(hash, data->has_chunks[i].hash,40)){
         id = data->has_chunks[i].id;
         break;
@@ -380,8 +380,10 @@ void process_inbound_udp(int sock, bt_config_t *config, data_t * data) {
 
     if(data->lastAckCount >= 3){
       data->lastSent = data->lastAck;
-      printf("Error!\n");
-      exit(-1);
+      DPRINTF(DEBUG_INIT, "Fast retransmit!\n");
+    }else{
+      //increase window size
+      increase_wsz(data);
     }
 
     DPRINTF(DEBUG_INIT, "ReqDataId:%d lastAck:%d ack_num:%d LastACK Count:%d lastAvailable:%d maxAvailable:%d lastSent:%d\n", data->reqDataId, data->lastAck, ack_num,  data->lastAckCount, data->lastAvailable, data->maxAvailable, data->lastSent);

@@ -41,6 +41,12 @@ enum State{
     FINISHED_SENDING
 };
 
+//congestion control state
+enum CC_State{
+    SLOW_START,
+    CONGESTION_AVOIDANCE
+};
+
 //this part is only for retransmit after time out
 int prev_sock;
 struct sockaddr_in *prev_from;
@@ -72,6 +78,9 @@ struct Data{
     int *recvedpPkg;
     char *output_file;
 
+    int ssthresh;
+    enum CC_State ccstate;
+    int nextAck;
     
 };
 
@@ -83,3 +92,4 @@ void process_get(char *chunkfile, char *outputfile, void *data);
 void initial_data(data_t *data, char* has_chunk_file);
 void reset_empty(data_t * data);
 void write_to_newfile(data_t * data);
+void increase_wsz(data_t *data);
