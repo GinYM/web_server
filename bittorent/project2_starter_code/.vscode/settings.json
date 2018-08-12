@@ -4,6 +4,7 @@
         "handle.h": "c",
         "chunk.h": "c",
         "types.h": "c",
-        "inet.h": "c"
+        "inet.h": "c",
+        "stdlib.h": "c"
     }
 }

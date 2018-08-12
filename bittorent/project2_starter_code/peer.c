@@ -24,6 +24,7 @@
 #include "chunk.h"
 #include <assert.h>
 #include <sys/time.h>
+#include <pthread.h>
 
 void peer_run(bt_config_t *config);
 
@@ -87,7 +88,7 @@ void sendData(int sock, bt_config_t *config, data_t *data, struct sockaddr_in * 
   fgets(master_chunk, CHUNK_LINE_SIZE, f);
   //chunk name, strip \n
   master_chunk[strcspn(master_chunk, "\n")] = '\0';
-  //DPRINTF(DEBUG_INIT, "Open file:%s\n", master_chunk+6);
+  DPRINTF(DEBUG_INIT, "Open file:%s\n", master_chunk+6);
   fclose(f);
   f = fopen(master_chunk+6, "rb");
   if(f == NULL){
@@ -104,6 +105,7 @@ void sendData(int sock, bt_config_t *config, data_t *data, struct sockaddr_in * 
   fill_msg_header(sendmsg);
   //type DATA
   sendmsg[3] = 3;
+  DPRINTF(DEBUG_INIT, "reqId:%d, lastSent:%d\n", data->reqDataId, data->lastSent);
   while(data->lastSent < data->lastAvailable){
     sent_len = data->lastSent*(1500-16);
     data->lastSent++;
@@ -521,6 +523,11 @@ void peer_run(bt_config_t *config) {
   struct sockaddr_in myaddr;
   fd_set readfds;
   struct user_iobuf *userbuf;
+
+  //create thread for printing window_size
+  pthread_t thread;
+  int ret_thrd;
+  ret_thrd = pthread_create(&thread, NULL, (void *)&print_message_function, (void *) message1);
   
   if ((userbuf = create_userbuf()) == NULL) {
     perror("peer_run could not allocate userbuf");
@@ -545,9 +552,9 @@ void peer_run(bt_config_t *config) {
   spiffy_init(config->identity, (struct sockaddr *)&myaddr, sizeof(myaddr));
 
   //initial data
-  struct Data data;
+  struct Data *data;
   DPRINTF(DEBUG_INIT ,"Has chunk file:%s\n", config->has_chunk_file);
-  initial_data(&data, config->has_chunk_file);
+  initial_data(data, config->has_chunk_file);
   
   struct timeval timeout={1,0};
 
@@ -556,7 +563,7 @@ void peer_run(bt_config_t *config) {
     FD_SET(STDIN_FILENO, &readfds);
     FD_SET(sock, &readfds);
     
-    if(data.state == SENDING_MSG)
+    if(data.state != SENDING_MSG)
       nfds = select(sock+1, &readfds, NULL, NULL, NULL);
     else{
       nfds = select(sock+1, &readfds, NULL, NULL, &timeout);
@@ -574,8 +581,8 @@ void peer_run(bt_config_t *config) {
           process_send_whohas(sock, config, &data);
       }
     }else if(nfds == 0 && data.state == SENDING_MSG){
-      //retransmit 
-
+      //timeout 
+      handle_timeout(&data);
     }
   }
 }

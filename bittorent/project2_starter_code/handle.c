@@ -120,6 +120,10 @@ void process_get(char *chunkfile, char *outputfile, void *data_void) {
   //fclose(f);
 }
 
+void update_available(data_t *data){
+  data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
+}
+
 void write_to_newfile(data_t * data){
   FILE *f = fopen(data->output_file, "wb");
   fwrite(data->targetData, data->getChunkNum*512*1024, 1, f);
@@ -130,7 +134,7 @@ void write_to_newfile(data_t * data){
 void increase_wsz(data_t *data){
   if(data->state == SLOW_START){
     data->window_size++;
-    data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
+    update_available(data);
     if(data->window_size == data->ssthresh){
       data->state = CONGESTION_AVOIDANCE;
       data->nextAck = data->lastAck + data->window_size;
@@ -139,9 +143,19 @@ void increase_wsz(data_t *data){
   }else{
     if(data->lastAck == data->nextAck){
       data->window_size++;
-      data->lastAvailable = data->lastAck+data->window_size < data->maxAvailable ? data->lastAck+data->window_size:data->maxAvailable;
+      update_available(data);
       data->nextAck = data->lastAck + data->window_size;
     }
   }
-  
+}
+
+void handle_timeout(data_t *data){
+  data->ssthresh = data->window_size/2 > 2 ? data->window_size/2 : 2;
+  data->window_size = 1;
+  data->ccstate = SLOW_START;
+  update_available(data);
+}
+
+void print_message_function ( int sock, int t, int ws){
+  printf("%d %d %d", sock, t, ws);
 }

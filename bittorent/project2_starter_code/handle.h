@@ -11,6 +11,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
+
 #define CHUNK_LINE_SIZE 500
 
 struct Chunk{
@@ -60,24 +61,26 @@ struct Data{
     int has_chunks_num;
     enum State state;
     unsigned char * targetData;
-    int window_size;
-    int lastAck;
-    int lastSent;
-    int lastAvailable;
-    int maxAvailable;
+    
 
     int lastAckCount;
 
+    // for peer which want to download files from other peer
     int reqDataId;
     peerDataIdx_t * peer2Idx;
     unsigned char*getChunk; // chunk that needed to fetch
     int getChunkIdx; // current Fetch Chunk
     int getChunkNum; // total number of chunk to get from one peer
-
+    char *output_file;
     int lastAckSent;
     int *recvedpPkg;
-    char *output_file;
 
+    // for peer sending files
+    int window_size;
+    int lastAck;
+    int lastSent;
+    int lastAvailable;
+    int maxAvailable;
     int ssthresh;
     enum CC_State ccstate;
     int nextAck;
@@ -93,3 +96,5 @@ void initial_data(data_t *data, char* has_chunk_file);
 void reset_empty(data_t * data);
 void write_to_newfile(data_t * data);
 void increase_wsz(data_t *data);
+void handle_timeout(data_t *data);
+void print_message_function (int sock, int t, int ws);
